@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', Arial, sans-serif;
 }
@@ -108,6 +113,39 @@ body, html {
   background-color: #222226;
   -webkit-transform: skewX(-17deg);
           transform: skewX(-17deg);
+}
+
+.advantages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .advantages {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .advantages {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.advantage {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 12px -2px #71717f;
+          box-shadow: 0 2px 12px -2px #71717f;
+  border-radius: 8px;
+  padding: 0 16px;
 }
 
 .gall-thumb {
