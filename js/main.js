@@ -1,3 +1,32 @@
+$( document ).ready(function() {
+
+  var swiper = new Swiper('.swiper-container', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 30,
+
+    navigation: {
+      nextEl: '.team-switcher--next',
+      prevEl: '.team-switcher--prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 480px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+    }
+  })
+
+});
+
 
 // Modal Image Gallery
 function onClick(element) {
