@@ -1,13 +1,13 @@
 $( document ).ready(function() {
 
-  var swiper = new Swiper('.swiper-container', {
+  let swiper1 = new Swiper('.swiper-container', {
     // Default parameters
     slidesPerView: 1,
     spaceBetween: 30,
 
     navigation: {
-      nextEl: '.team-switcher--next',
-      prevEl: '.team-switcher--prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
 
     // Responsive breakpoints

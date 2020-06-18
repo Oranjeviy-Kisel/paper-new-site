@@ -40,48 +40,41 @@ body, html {
   margin: 0;
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-  position: relative;
-}
-
-.swiper-slide {
-  height: 300px;
-  background: rgb(49, 160, 15);
-}
-
-.swiper-wrapper{
-}
-
-.team-card{
- height: 300px;
-}
-
-
-.team-switcher{
-  position: absolute;
+.break-line{
   display: block;
-  height: 100px;
-  background-color: red;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
+}
 
-  &--prev{
-    left: -10px;
+//margins
+.m-t-1{
+  margin-top: 1em;
+}
+.m-t-2{
+  margin-top: 2em;
+}
+.m-t-3{
+  margin-top: 3em;
+}
+
+.social-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    margin-right: 1em;
   }
 
-  &--next{
-    right: 0;
+  a:last-child {
+    margin-right: 0;
   }
 }
+
 
 
 
 /* Full height image header */
-.bgimg-1 {
+.main-header{
+  padding: 200px 0 50px 0;
   background-position: center;
   background-size: cover;
   background-image: url("../img/header-bg-main.jpg");
@@ -99,11 +92,42 @@ body, html {
 
 .main-heading{
   font-weight: 200;
-  line-height: 1.1em;
+  line-height: 1.5em;
   text-transform: uppercase;
   font-size: 2em;
   margin-top: 1em;
+
+  @media screen and (max-width: 576px) {
+    font-size: 1.5em;
+  }
 }
+
+.sub-heading{
+  font-weight: 700;
+  margin: 2em 0;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+
+  &__part{
+    display: inline-flex;
+    text-align: left;
+    margin: 5px 0;
+  }
+
+  &__divider{
+    content:"";
+    display: inline-flex;
+    width: 1px;
+    min-height: 30px;
+    background-color: #fff;
+    margin: 0 1em;
+    
+    
+  }
+}
+
+
 
 .logo-descriptor{
   font-weight: 200;
@@ -121,9 +145,6 @@ body, html {
   font-size: 2em;
   letter-spacing: 10px;
   margin-bottom: 1em;
-}
-.social-block{
-  margin-top: 1em;
 }
 
 .section-heading{
@@ -184,9 +205,41 @@ body, html {
   padding: 0 16px;
 }
 
+// команда стили
+
+
+.swiper-slide {
+  height: 300px;
+  // background: rgb(49, 160, 15);
+  align-self: stretch;
+}
+
+.team-card{
+ min-height: 300px;
+ background-color: $page-white;
+
+ .person-info{
+    padding:20px;
+  }
+  .person-name{
+    color: red;
+    text-align: center;
+  }
+  .person-profession{
+    text-align: center;
+  }
+  .person-info{
+    display: flex;
+    flex-direction: column;
+  }
+  button{
+    margin-top: auto;
+  }
+}
+
+
 
 // Галерея сетка
-
 .gallery-grid{
   @extend %list-reset;
   display: grid;
@@ -237,4 +290,32 @@ body, html {
 .gall-thumb:hover::before{
   opacity: 1;
   transform: translateY(0);
+}
+
+
+//clients
+.clients{
+  padding: 64px 0 200px 0;
+  background-color: $page-white;
+}
+
+.client-logo{ 
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img{
+    width: 80%;
+    height: auto;
+  }
+}
+
+//contacts
+.contacts-list{
+  @extend %list-reset;
+
+  &__item{
+    margin: 2em 0;
+  }
 }

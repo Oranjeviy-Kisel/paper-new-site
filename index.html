@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <link rel="stylesheet" href="css/style.css">
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+<link rel="stylesheet" href="css/swiper.css">
 <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+
+<!-- Подключение font awesome -->
+<script src="https://kit.fontawesome.com/b7932a432a.js" crossorigin="anonymous"></script>
 
 <body>
 
@@ -27,10 +27,10 @@
         </a>
       </div>
       <div class="w3-right w3-hide-small w3-hide-medium">
-        <a href="#about" class="w3-bar-item w3-button">О нас</a>
-        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> КОМАНДА</a>
-        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> ПОРТФОЛИО</a>
-        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> КОНТАКТЫ</a>
+        <a href="#about" class="w3-bar-item w3-button"><i class="fas fa-info-circle"></i> О НАС</a>
+        <a href="#team" class="w3-bar-item w3-button"><i class="fas fa-user"></i> КОМАНДА</a>
+        <a href="#work" class="w3-bar-item w3-button"><i class="fas fa-th"></i> ПОРТФОЛИО</a>
+        <a href="#contact" class="w3-bar-item w3-button"><i class="fas fa-envelope"></i> КОНТАКТЫ</a>
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -41,19 +41,19 @@
   </div>
 
   <!-- Sidebar on small screens when clicking the menu icon -->
-  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-large"
     style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">×</a>
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">О НАС</a>
     <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">КОМАНДА</a>
-    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">ПОРТФОЛИО</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">КОНТАКТЫ</a>
   </nav>
 
   <!-- Header with full-height image -->
-  <header class="bgimg-1 w3-display-container w3-grayscale-min w3-center" id="home">
+  <header class="main-header w3-container w3-grayscale-min w3-center" id="home">
 
-    <div class="w3-display-middle w3-text-white" style="padding:48px">
+    <div class="w3-content w3-text-white">
       <p class="w3-hide-small logo-descriptor">Мастерская невероятного декора</p>
       <div class="header-logo w3-hide-small">
         <img src="img/PAPERFORM_logo2.svg" width="300px" height="auto" />
@@ -61,21 +61,31 @@
 
       <div class="w3-hide-large w3-hide-medium logo-descriptor-mob">Мастерская невероятного
         декора</div>
-      <h3 class="main-heading">Делаем уникальный декор, такого больше нигде не найдете.</h2>
-        <p><a href="#about"
+
+      <h3 class="main-heading">
+        Делаем уникальные декорации, <span class="break-line">реквизит, бутафорию.</span>
+      </h3>
+
+      <div class="sub-heading">
+        <p class="sub-heading__part">Стандартные и на заказ</p>
+        <div class="sub-heading__divider"></div>
+        <p class="sub-heading__part">По всему миру</p>
+      </div>
+       
+      <p><a href="#about"
             class="w3-button w3-transparent w3-padding-large w3-large w3-margin-top w3-border w3-hover-opacity"
             style="transition: all 0.5s">Узнать
             подробнее!</a>
-        </p>
-        <div class="w3-text-grey w3-xxlarge w3-auto social-block">
-          <a href="https://www.instagram.com/paperform.ru/" target="_blank"><i
-              class="fa fa-instagram w3-hover-opacity"></i></a>
-          <a href="http://"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-          <a href="http://"><i class="fa fa-vk w3-hover-opacity"></i>
-          </a>
-        </div>
+      </p>
+      <div class="social-block m-t-3 w3-text-grey">
+        <a href="https://www.instagram.com/paperform.ru/" target="_blank"><i class="fab fa-instagram w3-hover-opacity fa-3x"></i></a>
+        <a href="#"><i class="fab fa-facebook w3-hover-opacity fa-3x"></i></a>
+        <a href="#"><i class="fab fa-pinterest w3-hover-opacity fa-3x"></i></a>
+      </div>
     </div>
   </header>
+
+  
 
   <!-- About Section -->
   <div class="w3-container w3-padding-64" id="about">
@@ -155,7 +165,7 @@
       <div class="w3-content">
         <div class="w3-row-padding">
           <h3 class="w3-center">
-            <span class="w3-border-bottom">Декорации для фото и видео</span>
+            <span class="w3-border-bottom">Декорации на заказ для телевидения, театра, кино.</span>
           </h3>
           <div class="w3-col m6">
             <img class="w3-image w3-round-large" src="img/vitriny-700.jpg" alt="Витрина Ahmadulina dreams" width="700"
@@ -178,48 +188,41 @@
           <h3 class="w3-center w3-margin-bottom">
             <span class="w3-border-bottom">Объемные фигуры</span>
           </h3>
+          <p class="w3-center w3-margin-bottom">Наша мастерская уже долгое время занимается производством объемных полигональных фигур. В нашем ассортименте представлен как набор готовых объемных полигональных фигур, так и возможна разработка уникальных на заказ</p>
+
+          <ul class="">
+            <li>
+              <h4>Фигуры стандартные</h4>
+              <p>Разработанные студией стандартные тиражируемые фигуры, доступные в короткий срок по фиксированным ценам.</p>
+              <p>Варианты материалов:</p>
+              <ul>
+                <li>Картон</li>
+                <li>Пластик</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4>Фигуры на заказ</h4>
+              <p>Каждая разработка уникальна, расчитывается индивидуально.</p>
+              <p>Варианты материалов:</p>
+              <ul>
+                <li>Пластик</li>
+                <li>Картон</li>
+                <li>Металл</li>
+              </ul>
+            </li>
+          </ul>
+
           <div class="w3-col m6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et
-              dolore.</p>
-            <ul>
-              <li>
-                Фигуры из картона
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                </ul>
-              </li>
-              <li>
-                Фигуры из пластика
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                </ul>
-              </li>
-              <li>
-                Фигуры из металла
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                </ul>
-              </li>
-              <li>
-                Маски
-              </li>
-            </ul>
-            <a href="#work" class="w3-button w3-black"><i class="fa fa-th"></i>Посмотреть портфолио</a>
+            <img class="w3-image w3-round-large" src="img/red-bear.jpg" alt="Полигональный медведь из пластика"
+              width="700" height="auto">
           </div>
 
           <div class="w3-col m6">
             <img class="w3-image w3-round-large" src="img/red-bear.jpg" alt="Полигональный медведь из пластика"
               width="700" height="auto">
           </div>
+
         </div>
       </div>
     </div>
@@ -337,8 +340,8 @@
   <!-- услуги раздел конец -->
 
 
-  <!-- команда раздел -->
-  <div class="w3-container w3-padding-64" id="team">
+  <!-- команда section -->
+  <section class="w3-container w3-padding-64" id="team">
     <div class="w3-content">
 
       <h2 class="w3-center section-heading">
@@ -350,62 +353,61 @@
 
         <div class="swiper-wrapper">
           <!-- slide 1 -->
-          <div class="swiper-slide">
-            <div class="w3-card">
+          <div class="swiper-slide team-card">
               <img src="img/Ivan-1.jpg" alt="Ivan Novikov photo" style="width:100%">
-              <div class="w3-container">
-                <h4 class="w3-text-grey">Иван Новиков</h4>
-                <p class="w3-opacity">Директор, главный конструктор</p>
-                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+
+              <div class="person-info">
+                <h4 class="person-name">Иван Новиков</h4>
+                <p class="person-profession">Директор, главный конструктор</p>
+                <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
                 <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Написать
                     письмо</button>
                 </p>
               </div>
-            </div>
+            
           </div>
 
           <!-- slide 2 -->
-          <div class="swiper-slide">
-            <div class="w3-card">
+          <div class="swiper-slide team-card">
               <img src="img/Olga-1.jpg" alt="Olga Galanina photo" style="width:100%">
-              <div class="w3-container">
-                <h4 class="w3-text-grey">Ольга Галанина</h4>
-                <p class="w3-opacity">Исполнительный директор, декоратор</p>
-                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Написать
+
+              <div class="person-info">
+                <h4 class="person-name">Ольга Галанина</h4>
+                <p class="person-profession">Исполнительный директор, декоратор</p>
+                <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <button class="w3-button w3-light-grey w3-block"><i class="fas fa-envelope"></i> Написать
                     письмо</button>
-                </p>
+                
               </div>
-            </div>
+
           </div>
 
           <!-- slide 3 -->
-          <div class="swiper-slide">
-            <div class="w3-card">
+          <div class="swiper-slide team-card">
+
               <img src="img/Julia-1.jpg" alt="Julia Plenkova photo" style="width:100%">
-              <div class="w3-container">
-                <h4 class="w3-text-grey">Юлия Пленкова</h4>
-                <p class="w3-opacity">Менеджер проектов, декоратор</p>
-                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Написать
-                    письмо</button>
-                </p>
+
+              <div class="person-info">
+                <h4 class="person-name">Юлия Пленкова</h4>
+                <p class="person-profession">Менеджер проектов, декоратор</p>
+                <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <button class="w3-button w3-light-grey w3-block"><i class="fas fa-envelope"></i> Написать
+                  письмо</button>
               </div>
-            </div>
+
           </div>
 
           <!-- slide 4 -->
-          <div class="swiper-slide">
-            <div class="w3-card">
-              <img src="img/Den.jpg" alt="Den Khokhlov photo" style="width:100%">
-              <div class="w3-container">
-                <h4 class="w3-text-grey">Денис Хохлов</h4>
-                <p class="w3-opacity">Технический дизайнер</p>
-                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Написать
-                    письмо</button>
-                </p>
-              </div>
+          <div class="swiper-slide team-card">
+            <img src="img/Den.jpg" alt="Den Khokhlov photo" style="width:100%">
+
+            <div class="person-info">
+              <h4 class="person-name">Денис Хохлов</h4>
+              <p class="person-profession">Технический дизайнер</p>
+              <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <button class="w3-button w3-light-grey w3-block"><i class="fas fa-envelope"></i> Написать
+                  письмо</button>
+
             </div>
           </div>
 
@@ -413,24 +415,35 @@
           <div class="swiper-slide team-card">
             <img src="img/Tim.jpg" alt="Tim Smirnov photo" style="width:100%">
 
-            <h4 class="w3-text-grey">Тимофей Смирнов</h4>
-            <p class="w3-opacity">Технический дизайнер</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Написать
-                письмо</button>
-            </p>
-
+            <div class="person-info">
+              <h4 class="person-name">Тимофей Смирнов</h4>
+              <p class="person-profession">Главный технолог</p>
+              <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <button class="w3-button w3-light-grey w3-block"><i class="fas fa-envelope"></i> Написать
+                  письмо</button>
+            </div>
           </div>
 
-        </div>
-
-        <!-- Add Arrows -->
-        <div class="team-switcher team-switcher--prev">prev</div>
-        <div class="team-switcher team-switcher--next">next</div>
+          <!-- slide 5 -->
+          <div class="swiper-slide team-card">
+            <img src="img/Nata.jpg" alt="Natalya Lev photo" style="width:100%">
+            <div class="person-info">
+              <h4 class="person-name">Наталья Лев</h4>
+              <p class="person-profession">Декоратор-сборщик</p>
+              <p class="person-about">Занимается сборкой изделий и декораций 3 года</p>
+              <button class="w3-button w3-light-grey w3-block"><i class="fas fa-envelope"></i> Написать
+                  письмо</button>
+              
+            </div>
+          </div>
       </div>
 
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
     </div>
-  </div>
+  </section>
 
   <!-- статистика раздел -->
   <div class="w3-container w3-dark-grey w3-padding-64">
@@ -463,7 +476,7 @@
 
 
 
-  <div class="w3-container w3-padding-64" id="work">
+  <div class="w3-container w3-padding-64 w3-light-grey" id="work">
     <div class="w3-content">
       <h2 class="w3-center section-heading">
         <span class="w3-text-white">ГАЛЕРЕЯ РАБОТ</span>
@@ -532,8 +545,8 @@
 
         <li class="gallery-card">
           <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Полигональный медведь из пластика для Duty Free Moscow'>
-            <img src="img/red-bear-600.jpg" alt="Red Plastic Bear" />
+            data-descr='Кухонная мебель для съемок детской передачи'>
+            <img src="img/kuhnya-600.jpg" alt="Kitchen for children" />
           </div>
         </li>
 
@@ -583,7 +596,7 @@
   </div>
   -->
   <!-- клиенты раздел -->
-  <div class="w3-container w3-light-grey w3-padding-64" id="clients">
+  <div class="w3-container clients" id="clients">
     <div class="w3-content w3-center">
       <h2 class="section-heading">
         <span class="w3-text-white">НАШИ КЛИЕНТЫ</span>
@@ -591,62 +604,36 @@
       <p class="w3-large">С нами сотрудничают:
       </p>
 
-      <div class="w3-row" style="margin-top:64px">
-        <div class="w3-col s3">
-          <i class="fa fa-bolt w3-text-orange w3-jumbo"></i>
-          <p>Fast</p>
-        </div>
-        <div class="w3-col s3">
-          <i class="fa fa-heart w3-text-red w3-jumbo"></i>
-          <p>Loved</p>
-        </div>
-        <div class="w3-col s3">
-          <i class="fa fa-camera w3-text-yellow w3-jumbo"></i>
-          <p>Clarity</p>
-        </div>
-        <div class="w3-col s3">
-          <i class="fa fa-battery-full w3-text-green w3-jumbo"></i>
-          <p>Power</p>
-        </div>
-      </div>
 
-      <div class="w3-row" style="margin-top:64px">
-        <div class="w3-col s3">
-          <i class="fa fa-diamond w3-text-white w3-jumbo"></i>
-          <p>Sharp</p>
-        </div>
-        <div class="w3-col s3">
-          <i class="fa fa-cloud w3-text-blue w3-jumbo"></i>
-          <p>Cloud</p>
-        </div>
-        <div class="w3-col s3">
-          <i class="fa fa-globe w3-text-amber w3-jumbo"></i>
-          <p>Global</p>
-        </div>
-        <div class="w3-col s3">
-          <i class="fa fa-hdd-o w3-text-cyan w3-jumbo"></i>
-          <p>Storage</p>
-        </div>
-      </div>
+      <div class="swiper-container ">
 
-      <div class="w3-row" style="margin-top:64px">
-        <div class="w3-col s3">
-          <i class="fa fa-user w3-text-sand w3-jumbo"></i>
-          <p>Safe</p>
+        <div class="swiper-wrapper">
+          <!-- slide client1  -->
+          <div class="swiper-slide">
+            <div class="client-logo">
+              <img src="img/clients/megafon-logo.svg" alt="Megafon" width="80%" height="auto">
+            </div>
+          </div>
+
+          <!-- client 2 -->
+          <div class="swiper-slide">
+            <div class="client-logo">
+              <img src="img/clients/mts-logo.png" alt="MTS" width="80%" height="auto">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="client-logo">
+              <img src="img/clients/akhmadullina.svg" alt="Alena Akhmadulina" width="80%" height="auto">
+            </div>
+          </div>
+
         </div>
-        <div class="w3-col s3">
-          <i class="fa fa-shield w3-text-orange w3-jumbo"></i>
-          <p>Stabile</p>
-        </div>
-        <div class="w3-col s3">
-          <i class="fa fa-wifi w3-text-grey w3-jumbo"></i>
-          <p>Connected</p>
-        </div>
-        <div class="w3-col s3">
-          <i class="fa fa-image w3-text-pink w3-jumbo"></i>
-          <p>HD</p>
-        </div>
+              <!-- Add Arrows -->
+        <div class="swiper-button-next" style="right: 0"></div>
+        <div class="swiper-button-prev" style="left: 0"></div>
       </div>
+      
 
     </div>
   </div>
@@ -715,19 +702,21 @@
       <h2 class="section-heading">
         <span class="w3-text-white">НАШИ КОНТАКТЫ</span>
       </h2>
-      <p class="w3-large">Пишите, звоните, найдите уж нас, наконец!
+      <p class="w3-large">Пишите, звоните, да найдите уж нас, наконец!
       </p>
 
       <div class="contacts-row w3-row-padding" style="margin-top:64px">
-
-        <div class="contacts-text w3-half">
-          <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Москва, Зелeноград</p>
-          <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Тел: +7 903 532-04-04</p>
-          <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: razrabotka2@gmail.com
-          </p>
-        </div>
+      <div class="w3-half w3-left-align">
+        <ul class="contacts-list">
+          <li class="contacts-list__item"><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Москва, Зелeноград, ул. Заводская, д. 21А, стр.3</li>
+          <li class="contacts-list__item"><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Тел: +7 903 532-04-04</li>
+          <li class="contacts-list__item"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: razrabotka2@gmail.com
+          </li>
+        </ul>
+      </div>
 
         <div class="contacts-map w3-half w3-section">
+          <a href=""></a>
           <img src="img/map.jpg" alt="Зеленоград, ул.Заводская, 21А стр. 3" width="100%" height="auto">
         </div>
       </div>
@@ -744,7 +733,7 @@
         </p>
         <p>
           <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-            <i class="fa fa-paper-plane"></i> ОТПРАВИТЬ
+            <i class="fas fa-paper-plane"></i> ОТПРАВИТЬ
           </button>
         </p>
       </form>
@@ -754,21 +743,21 @@
 
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-64">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Наверх</a>
-    <div class="w3-xlarge w3-section">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="#home" class="w3-button w3-light-grey"><i class="fas fa-arrow-up"></i>Наверх</a>
+
+    <div class="social-block m-t-3 w3-text-grey">
+      <a href="https://www.instagram.com/paperform.ru/" target="_blank"><i class="fab fa-instagram w3-hover-opacity fa-3x"></i></a>
+      <a href="#"><i class="fab fa-facebook w3-hover-opacity fa-3x"></i></a>
+      <a href="#"><i class="fab fa-pinterest w3-hover-opacity fa-3x"></i></a>
     </div>
-    <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
+    <p>&copy; Мастерская <a href="#" title="W3.CSS" target="_blank" class="w3-hover-text-green"><strong>PAPERFORM</strong></a>, 2020. Все права соблюдены,  
+      <span class="w3-text-grey">но это не точно</span></p>
   </footer>
 
 
 
   <!-- <script src="https://unpkg.com/swiper/js/swiper.js"></script> -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
