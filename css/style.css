@@ -30,6 +30,12 @@ body, html {
   overflow: hidden;
 }
 
+.advantages, .gallery-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -154,9 +160,6 @@ body, html {
 }
 
 .advantages {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -184,6 +187,35 @@ body, html {
           box-shadow: 0 2px 12px -2px #71717f;
   border-radius: 8px;
   padding: 0 16px;
+}
+
+.gallery-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .gallery-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .gallery-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.gallery-card {
+  background-color: #222226;
+  -webkit-box-shadow: 0 2px 12px -2px #71717f;
+          box-shadow: 0 2px 12px -2px #71717f;
+  border-radius: 8px;
 }
 
 .gall-thumb {

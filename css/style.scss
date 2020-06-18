@@ -34,6 +34,12 @@ body, html {
   overflow: hidden;
 }
 
+%list-reset{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -107,6 +113,7 @@ body, html {
   letter-spacing: 1em;
   margin-bottom: 1em;
 }
+
 .logo-descriptor-mob{
   font-weight: 700;
   line-height: 1.4em;
@@ -157,9 +164,7 @@ body, html {
 }
 
 .advantages{
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @extend %list-reset;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
@@ -171,6 +176,7 @@ body, html {
     grid-template-columns: 1fr;
   }
 }
+
 .advantage{
   background-color: $page-white;
   box-shadow: 0 2px 12px -2px lighten($dark-grey, 33%);
@@ -178,6 +184,28 @@ body, html {
   padding: 0 16px;
 }
 
+
+// Галерея сетка
+
+.gallery-grid{
+  @extend %list-reset;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-card{
+  background-color: $dark-grey;
+  box-shadow: 0 2px 12px -2px lighten($dark-grey, 33%);
+  border-radius: 8px;
+}
 
 .gall-thumb{
   overflow: hidden;
