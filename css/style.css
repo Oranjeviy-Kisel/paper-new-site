@@ -194,6 +194,11 @@ body, html {
   width: 15px;
 }
 
+.page-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .advantages {
   display: -ms-grid;
   display: grid;
