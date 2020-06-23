@@ -1,15 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&display=swap');
 
 // Color variables
-$dark-grey: #222226;
+$darkgrey: #222226;
 $page-white: #ffffff;
+$teal: #009688;
+$bluegray: #607d8b;
+
+
+//backgrounds
+.bg-red{
+  background-color: red;
+}
+.bg-green{
+  background-color: green;
+}
+.bg-blue{
+  background-color: blue;
+  color: white;
+}
+.bg-pink{
+  background-color: pink;
+}
+.bg-greenyellow{
+  background-color: greenyellow;
+}
+.bg-darkblue{
+  background-color: darkblue;
+  color: white;
+}
+
+.bg-bluegray{
+  background-color: $bluegray;
+  color: white;
+}
+
+//   text-colors  //
+.text-white{
+  color: $page-white;
+}
+
+.text-darkgrey{
+  color: $darkgrey;
+}
+
+//   text-alignment  //
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+
 
 *{
   box-sizing: border-box;
-}
-
-body,h1,h2,h3,h4,h5,h6 {
-  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -18,9 +63,17 @@ h1,h2,h3,h4,h5,h6{
   line-height: 140%;
 }
 
-body, html {
-  height: 100%;
+h3{
+  font-size: 1.5rem;
+}
+
+body{
+  margin: 0;
+  padding: 0;
   line-height: 1.8;
+  min-width: 320px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
 }
 
 .visually-hidden {
@@ -44,6 +97,96 @@ body, html {
   display: block;
 }
 
+section, p {
+   margin:0;
+}
+
+.resp-wrapper {
+  margin: 0 auto;
+}
+
+.page-section{
+  padding-top: 100px;
+}
+
+
+.layout-3-2-1{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.layout-2-1{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  @media screen and (min-width: 769px){
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .resp-wrapper{
+    padding: 0 18px;
+  }
+
+  .layout-3-2-1{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .resp-wrapper{
+    padding: 0 20px;
+  }
+
+  .layout-3-2-1{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .resp-wrapper{
+    padding: 0 24px;
+  }
+
+  .layout-3-2-1{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .resp-wrapper{
+    padding: 0 30px;
+  }
+
+  .layout-3-2-1{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1261px) {
+  .resp-wrapper{
+    max-width: 1200px;
+  }
+
+  .layout-3-2-1{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.grid-cell{
+  &--border-rounded{
+    border: 2px solid $page-white;
+    border-radius: 1rem;
+  }
+}
+
+.page-header{
+  height: 50px;
+}
+
 //margins
 .m-t-1{
   margin-top: 1em;
@@ -59,8 +202,6 @@ body, html {
   padding-bottom: 100px;
 }
 
-
-
 .social-block{
   display: flex;
   justify-content: center;
@@ -74,8 +215,6 @@ body, html {
     margin-right: 0;
   }
 }
-
-
 
 
 /* Full height image header */
@@ -150,6 +289,7 @@ body, html {
 }
 
 .section-heading{
+  text-align: center;
   margin-bottom: 2em;
   position: relative;
   font-size: 2em;
@@ -161,7 +301,7 @@ body, html {
 
 .section-heading span{
   position : relative;
-  background-color: $dark-grey;
+  background-color: $darkgrey;
   padding: 5px 15px 5px 11px ;
 }
 
@@ -170,7 +310,7 @@ body, html {
   position: absolute;
   content: "";
   display: block;
-  background-color: $dark-grey;
+  background-color: $darkgrey;
   top: 0;
   transform: skewX(-17deg);
   height: 100%;
@@ -184,10 +324,6 @@ body, html {
 .section-heading span::after{
   right: -8px;
   width: 15px;
-}
-
-.page-section{
-  padding-top: 100px;
 }
 
 .advantages{
@@ -206,7 +342,7 @@ body, html {
 
 .advantage{
   background-color: $page-white;
-  box-shadow: 0 2px 12px -2px lighten($dark-grey, 33%);
+  box-shadow: 0 2px 12px -2px lighten($darkgrey, 33%);
   border-radius: 8px;
   padding: 0 16px;
 }
@@ -252,8 +388,8 @@ body, html {
 }
 
 .gallery-card{
-  background-color: $dark-grey;
-  box-shadow: 0 2px 12px -2px lighten($dark-grey, 33%);
+  background-color: $darkgrey;
+  box-shadow: 0 2px 12px -2px lighten($darkgrey, 33%);
   border-radius: 8px;
 }
 
