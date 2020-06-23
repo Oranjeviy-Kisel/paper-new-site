@@ -57,9 +57,9 @@
   </nav>
 
   <!-- Header with full-height image -->
-  <header class="main-header w3-container w3-grayscale-min w3-center" id="home">
+  <header class="main-header text-white" id="home">
+    <div class="resp-wrapper">
 
-    <div class="text-white">
       <p class="w3-hide-small logo-descriptor">Мастерская невероятного декора</p>
       <div class="header-logo w3-hide-small">
         <img src="img/PAPERFORM_logo2.svg" width="300px" height="auto" />
@@ -88,12 +88,13 @@
         <a href="#"><i class="fab fa-facebook fa-3x"></i></a>
         <a href="#"><i class="fab fa-pinterest fa-3x"></i></a>
       </div>
-    </div>
+
+   </div>
   </header>
 
 
   <!-- About Section -->
-  <section class="page-section bg-bluegray" id="about">
+  <section class="page-section bg-bluegray p-b-4" id="about">
     <div class="resp-wrapper">
 
       <h2 class="section-heading">
@@ -121,37 +122,41 @@
 
       <ul class="advantages">
         <li class="advantage">
-          <p class="text-center">
-            <i class="fas fa-cog w3-margin w3-jumbo"></i>
-          </p>
-          <h4 class="w3-large w3-center w3-padding-large">Полный цикл производства</h4>
-          <p>Мы осуществляем полный цикл работ: дизайн, проектировка, инженерные расчеты, производство, доставка,
-            монтаж.</p>
+          <p class="advantage__icon"><i class="fas fa-cog fa-5x"></i></p>
+          <h4 class="advantage__header">
+            <span class="break-line">Полный цикл</span>
+            <span class="break-line">работ</span>
+          </h4>
+          <p class="advantage__description">Дизайн, проектировка, инженерные расчеты, производство, доставка,
+            монтаж - это все наше собственное!</p>
         </li>
 
         <li class="advantage">
-          <p class="text-center">
-            <i class="fas fa-heart w3-margin w3-jumbo w3-center"></i>
-          </p>
-          <h4 class="text-center">Собственная база</h4>
-          <p>Наша мастерская обладает необходимым парком оборудования, аутсорсинг сведен к минимуму.</p>
+          <p class="advantage__icon"><i class="fas fa-tools fa-5x"></i></p>
+          <h4 class="advantage__header">
+            <span class="break-line">Собственное</span>
+            <span class="break-line">производство</span>
+          </h4>
+          <p class="advantage__description">Наша мастерская обладает необходимым парком оборудования, аутсорсинг сведен к минимуму.</p>
         </li>
 
         <li class="advantage">
-          <p class="text-center">
-            <i class="fas fa-diamond w3-margin w3-jumbo"></i>
-          </p>
-          <h4 class="w3-large w3-center w3-padding-large">Уникальные разработки</h4>
-          <p>Собственные технологические разработки во всем процессе производства и контролировать процесс
+          <p class="advantage__icon"><i class="fas fa-brain fa-5x"></i></p>
+          <h4 class="advantage__header">
+            <span class="break-line">Уникальные</span>
+            <span class="break-line">разработки</span>
+          </h4>
+          <p class="advantage__description">Собственные технологические разработки во всем процессе производства и контролировать процесс
             от и до.</p>
         </li>
 
         <li class="advantage">
-          <p class="w3-center">
-            <i class="fas fa-desktop w3-margin w3-jumbo w3-center"></i>
-          </p>
-          <h4 class="w3-large w3-center w3-padding-large">Мониторинг и поддержка</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          <p class="advantage__icon"><i class="fas fa-desktop fa-5x"></i></p>
+          <h4 class="advantage__header">
+            <span class="break-line">Авторский</span> 
+            <span class="break-line">надзор</span>
+          </h4>
+          <p class="advantage__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore.</p>
         </li>
 
@@ -161,191 +166,174 @@
   </section>
 
 
-
-
   <!-- услуги раздел -->
-    <section class="page-section bg-red" id="products">
-      <div class="resp-wrapper">
+    <section class="page-section bg-pink" id="products">
         <h2 class="section-heading">
-          <span class="w3-text-white">НАШИ ПРОДУКТЫ:</span>
+          <span class="text-white">НАШИ ПРОДУКТЫ:</span>
         </h2>
 
-        <h3 class="text-center">
-          <span class="">Объемные фигуры</span>
-        </h3>
+        <section class="sub-section bg-red">
+          <div class="resp-wrapper">
+            <h3 class="text-center">
+              <span class="">Объемные фигуры</span>
+            </h3>
 
-        <p class="text-center">Наша мастерская уже долгое время занимается производством объемных полигональных фигур.
-          В нашем ассортименте представлен как набор готовых объемных полигональных фигур, так и возможна разработка уникальных на заказ</p>
+            <p class="text-center">Наша мастерская уже долгое время занимается производством объемных полигональных фигур. В нашем ассортименте представлен как набор готовых объемных полигональных фигур, так и возможна разработка уникальных на заказ</p>
 
-        <div class="layout-2-1">
-          <div class="grid-cell--border-rounded">
-            <h4>Фигуры стандартные</h4>
-            <p>Разработанные студией стандартные тиражируемые фигуры, доступные в короткий срок по фиксированным ценам.</p>
-            <p>Варианты материалов:</p>
-            <ul class="w3-ul">
-              <li>Картон</li>
-              <li>Пластик</li>
-            </ul>
-            <img class="" src="img/red-bear.jpg" alt="Полигональный медведь из пластика" width="100%" height="auto">
+            <div class="layout-2-1">
+              <div class="grid-cell--border-rounded">
+                <h4>Фигуры стандартные</h4>
+                <p>Разработанные студией стандартные тиражируемые фигуры, доступные в короткий срок по фиксированным ценам.</p>
+                <p>Варианты материалов:</p>
+                <ul class="">
+                  <li>Картон</li>
+                  <li>Пластик</li>
+                </ul>
+                <img class="" src="img/red-bear.jpg" alt="Полигональный медведь из пластика" width="100%" height="auto">
+              </div>
+
+              <div class="grid-cell--border-rounded">
+                <h4>Фигуры на заказ</h4>
+                <p>Каждая разработка уникальна, расчитывается индивидуально.</p>
+                <p>Варианты материалов:</p>
+                <ul class="">
+                  <li>Пластик</li>
+                  <li>Картон</li>
+                  <li>Металл</li>
+                </ul>
+                <img class="w3-image w3-round-large" src="img/red-bear.jpg" alt="Полигональный медведь из пластика" width="100%" height="auto">
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div class="grid-cell--border-rounded">
-            <h4>Фигуры на заказ</h4>
-            <p>Каждая разработка уникальна, расчитывается индивидуально.</p>
-            <p>Варианты материалов:</p>
-            <ul class="w3-ul">
-              <li>Пластик</li>
-              <li>Картон</li>
-              <li>Металл</li>
-            </ul>
-            <img class="w3-image w3-round-large" src="img/red-bear.jpg" alt="Полигональный медведь из пластика" width="100%" height="auto">
+        <section class="sub-section bg-greenyellow">
+          <div class="resp-wrapper">
+            <h3 class="text-center">
+              <span class="">Оформление витрин</span>
+            </h3>
+            <div class="layout-2-1">
+              <div class="grid-cell--border-rounded">
+                <img class="w3-image w3-round-large" src="img/vitriny-700.jpg" alt="Витрина Ahmadulina dreams" width="700"
+                height="auto">
+              </div>
+              <div class="grid-cell--border-rounded">
+                <p>Комплексное оформление, а также производство отдельных элементов витрин. Разработка элементов по эскизам
+                  заказчика.</p>
+                <a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a>
+              </div>
+
+            </div>
+
+            
+
+
           </div>
+        </section>
+
+        <section class="sub-section">
+          <div class="resp-wrapper">
+
+            <h3 class="text-center">
+              <span class="w3-border-bottom">Декорации на заказ для телевидения, театра, кино.</span>
+            </h3>
+
+            <div class="layout-2-1">
+              <div class="grid-cell--border-rounded">
+                <img class="" src="img/vitriny-700.jpg" alt="Витрина Ahmadulina dreams" width="100%"
+                  height="auto">
+              </div>
+              <div class="grid-cell--border-rounded">
+                <p>Комплексное оформление, а также производство отдельных элементов витрин. Разработка элементов по эскизам
+                  заказчика.</p>
+                <p><a href="#work" class="w3-button w3-black"><i class="fas fa-th"> </i> Посмотреть работы</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sub-section bg-blue">
+          <div class="resp-wrapper">
+            <h3 class="text-center">
+              <span class="w3-border-bottom">Нестандатные конструкции</span>
+            </h3>
+
+            <div class="layout-2-1">
+              <div class="grid-cell--border-rounded">
+                <img class="w3-image w3-round-large" src="img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+              </div>
+
+              <div class="grid-cell--border-rounded">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et
+                  dolore.</p>
+                <ul class="">
+                  <li>Эксклюзивные проекты</li>
+                  <li>Мебель</li>
+                </ul>
+                <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sub-section bg-green">
+          <div class="resp-wrapper">
+
+            <h3 class="text-center">
+              <span class="w3-border-bottom">Плоские декорации</span>
+            </h3>
+
+            <div class="layout-2-1">
+              <div class="grid-cell--border-rounded">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et
+                  dolore.</p>
+                <ul>
+                  <li>Отдельные фигуры</li>
+                  <li>Тантамарезки</li>
+                  <li>Фоны, задники</li>
+                  <li>Многослойные диарамы</li>
+                </ul>
   
-        </div>
+                <a href="#work" class="w3-button w3-black"><i class="fas fa-th"> </i> Посмотреть работы</a>
+              </div>
 
+              <div class="grid-cell--border-rounded"> 
+                <img class="w3-image w3-round-large" src="img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+              </div>
+            </div>
 
-      </div>
+          </div>
+        </section>
+
+        <section class="sub-section bg-bluegray">
+          <div class="resp-wrapper">
+            <h3 class="text-center">
+              <span class="">Оформление площадок, эвенты</span>
+            </h3>
+
+            <div class="layout-2-1">
+              <div class="">
+                <p>Изготовление и монтаж декораций для фестивалей, шоу, городских и частных мероприятий</p>
+                <p><a href="#work" class="w3-button w3-black"><i class="fas fa-th"> </i> Посмотреть работы</a></p>
+              </div>
+              
+              <div class="">
+                <img class="w3-image w3-round-large" src="img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+              </div>
+            </div>
+          </div>
+        </section>
+
     </section>
-
-
-        <h3 class="text-center">
-          <span class="w3-border-bottom">Оформление витрин</span>
-        </h3>
-        <div class="w3-col m6">
-          <img class="w3-image w3-round-large" src="img/vitriny-700.jpg" alt="Витрина Ahmadulina dreams" width="700"
-            height="auto">
-        </div>
-
-        <div class="w3-col m6">
-          <p>Комплексное оформление, а также производство отдельных элементов витрин. Разработка элементов по эскизам
-            заказчика.</p>
-          <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <div class="w3-stretch w3-teal w3-padding-32">
-      <div class="w3-content">
-        <div class="w3-row-padding">
-          <h3 class="w3-center">
-            <span class="w3-border-bottom">Декорации на заказ для телевидения, театра, кино.</span>
-          </h3>
-          <div class="w3-col m6">
-            <img class="w3-image w3-round-large" src="img/vitriny-700.jpg" alt="Витрина Ahmadulina dreams" width="700"
-              height="auto">
-          </div>
-
-          <div class="w3-col m6">
-            <p>Комплексное оформление, а также производство отдельных элементов витрин. Разработка элементов по эскизам
-              заказчика.</p>
-            <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-
-    <div class="w3-stretch w3-light-grey w3-padding-32">
-      <div class="w3-content">
-        <div class="w3-row-padding">
-          <h3 class="w3-center w3-margin-bottom">
-            <span class="w3-border-bottom w3-padding-16">Фотозоны</span>
-          </h3>
-          <div class="w3-col m6 w3-padding-large">
-            <p>Проектирование и изготовление самых разнообразных фотозон и сопутствующих аксессуаров. </p>
-            <ul>
-              <li>Эксклюзивные фотозоны</li>
-              <li>Стандартные мобильные фотозоны</li>
-            </ul>
-            <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a></p>
-          </div>
-          <div class="w3-col m6">
-            <img class="w3-image w3-round-large" src="img/phzone_hexagon-700.jpg" alt="Фото фотозоны" width="700"
-              height="auto">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-stretch w3-blue-gray w3-padding-32">
-      <div class="w3-content">
-        <div class="w3-row-padding">
-          <h3 class="w3-center w3-margin-bottom">
-            <span class="w3-border-bottom">Нестандатные конструкции</span>
-          </h3>
-          <div class="w3-col m6">
-            <img class="w3-image w3-round-large" src="img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-          </div>
-
-          <div class="w3-col m6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et
-              dolore.</p>
-
-            <ul>
-              <li>Эксклюзивные проекты</li>
-              <li>Мебель</li>
-            </ul>
-
-            <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a></p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-stretch w3-deep-purple w3-padding-32">
-      <div class="w3-content">
-        <div class="w3-row-padding">
-          <h3 class="w3-center">
-            <span class="w3-border-bottom">Плоские декорации</span>
-          </h3>
-          <div class="w3-col m6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et
-              dolore.</p>
-            <ul>
-              <li>Отдельные фигуры</li>
-              <li>Татамарезки</li>
-              <li>Фоны, задники</li>
-              <li>Многослойные диарамы</li>
-            </ul>
-
-            <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a></p>
-          </div>
-          <div class="w3-col m6">
-            <img class="w3-image w3-round-large" src="img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-stretch w3-teal w3-padding-32">
-      <div class="w3-content">
-        <div class="w3-row-padding">
-          <h3 class="w3-center w3-margin-bottom">
-            <span class="w3-border-bottom">Оформление площадок, эвенты</span>
-          </h3>
-          <div class="w3-col m6">
-            <p>Изготовление и монтаж декораций для фестивалей, шоу, городских и частных мероприятий</p>
-            <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a></p>
-          </div>
-          <div class="w3-col m6">
-            <img class="w3-image w3-round-large" src="img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- услуги раздел конец -->
 
 
   <!-- команда section -->
-  <section class="page-section w3-container p-b-100" id="team">
-    <div class="w3-content">
+  <section class="page-section p-b-100" id="team">
+    <div class="resp-wrapper">
 
       <h2 class="w3-center section-heading">
-        <span class="w3-text-white">НАША ДРУЖНАЯ КОМАНДА</span>
+        <span class="text-white">НАША ДРУЖНАЯ КОМАНДА</span>
       </h2>
 
       <!-- Swiper -->
@@ -437,28 +425,30 @@
   </section>
 
   <!-- статистика раздел -->
-  <section class="page-section bg-pink p-b-100">
+  <section class="page-section bg-pink p-b-100 text-white">
     <div class="resp-wrapper">
       <h2 class="section-heading text-center">
-        <span class="w3-text-white">Наша статистика</span>
+        <span class="text-white">Наша статистика</span>
       </h2>
-      <div class="w3-row w3-dark-grey">
-        <div class="w3-quarter">
-          <span class="w3-xxlarge">50+</span>
+
+      <div class="layout-4-2-1">
+        <div class="statistic-cell">
+          <span class="">50+</span>
           <br>Инсталляций и монтажей
         </div>
-        <div class="w3-quarter">
-          <span class="w3-xxlarge">155+</span>
+        <div class="grid-cell">
+          <span class="">155+</span>
           <br>Выполненных проектов
         </div>
-        <div class="w3-quarter">
-          <span class="w3-xxlarge">11+</span>
+        <div class="grid-cell">
+          <span class="">11+</span>
           <br>Довольных клиентов
         </div>
-        <div class="w3-quarter">
-          <span class="w3-xxlarge">70+</span>
+        <div class="grid-cell">
+          <span class="">70+</span>
           <br>Уникальных разработок
         </div>
+
       </div>
     </div>
   </section>

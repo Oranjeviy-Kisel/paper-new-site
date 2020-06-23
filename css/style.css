@@ -103,6 +103,14 @@ section, p {
   padding-top: 100px;
 }
 
+.layout-4-2-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
 .layout-3-2-1 {
   display: -ms-grid;
   display: grid;
@@ -144,6 +152,10 @@ section, p {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .layout-4-2-1 {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
@@ -151,6 +163,10 @@ section, p {
     padding: 0 24px;
   }
   .layout-3-2-1 {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .layout-4-2-1 {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
@@ -164,6 +180,10 @@ section, p {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
+  .layout-4-2-1 {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 1261px) {
@@ -174,6 +194,15 @@ section, p {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
+  .layout-4-2-1 {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.grid-cell {
+  -webkit-box-shadow: 1px 1px 1px 1px black;
+          box-shadow: 1px 1px 1px 1px black;
 }
 
 .grid-cell--border-rounded {
@@ -197,8 +226,20 @@ section, p {
   margin-top: 3em;
 }
 
-.p-b-100 {
-  padding-bottom: 100px;
+.p-b-1 {
+  padding-bottom: 1rem;
+}
+
+.p-b-2 {
+  padding-bottom: 2rem;
+}
+
+.p-b-3 {
+  padding-bottom: 3rem;
+}
+
+.p-b-4 {
+  padding-bottom: 4rem;
 }
 
 .social-block {
@@ -367,11 +408,29 @@ section, p {
 }
 
 .advantage {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 2px 12px -2px #71717f;
-          box-shadow: 0 2px 12px -2px #71717f;
+  background: #ffffff url("../img/bg-abstr-01.svg") center top -250px no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 0 2px 10px -2px #222226;
+          box-shadow: 0 2px 10px -2px #222226;
   border-radius: 8px;
-  padding: 0 16px;
+  padding: 3em 1em 2em 1em;
+  color: #222226;
+}
+
+.advantage__icon {
+  color: #ffffff;
+  text-align: center;
+}
+
+.advantage__header {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.2em;
+}
+
+.advantage__description {
+  color: red;
+  padding-left: 1rem;
 }
 
 .swiper-container {
