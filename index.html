@@ -20,29 +20,28 @@
 
 
 <body>
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top">
-    <div class="w3-bar w3-card w3-text-white" id="myNavbar" style="background-color: rgba(10, 10, 10, 0.8);">
-      <!-- <a class="navbar-logo" href="#home"><span class="visually-hidden">PAPERFORM</span></a> -->
-      <!-- Right-sided navbar links -->
-      <div class="w3-left w3-bar-item">
-        <a href="#home">
-          <img src="img/PAPERFORM_logo2.svg" alt="PAPERFORM LOGO" width="auto" height="40px"><span
-            class="visually-hidden">PAPERFORM</span>
-        </a>
-      </div>
-      <div class="w3-right w3-hide-small w3-hide-medium">
-        <a href="#about" class="w3-bar-item w3-button"><i class="fas fa-info-circle"></i> О НАС</a>
-        <a href="#products" class="w3-bar-item w3-button"><i class="fas fa-envelope"></i> ПРОДУКЦИЯ</a>
-        <a href="#work" class="w3-bar-item w3-button"><i class="fas fa-th"></i> ПОРТФОЛИО</a>
-        <a href="#team" class="w3-bar-item w3-button"><i class="fas fa-user"></i> КОМАНДА</a>
-        <a href="#contact" class="w3-bar-item w3-button"><i class="fas fa-envelope"></i> КОНТАКТЫ</a>
-      </div>
-      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  <div class="main-nav-outer">
+    <div class="resp-wrapper">
+      <nav class="main-nav" id="myNavbar">
+        <div class="navbar-logo">
+          <a href="#home">
+            <img src="img/PAPERFORM_logo2.svg" alt="PAPERFORM LOGO" width="auto" height="40px"><span
+              class="visually-hidden">PAPERFORM</span>
+          </a>
+        </div>
 
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="w3_open()">
-        <i class="fa fa-bars"></i>
-      </a>
+        <ul class="nav-links hide-md">
+          <li class="nav-list-item"><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> О НАС</a></li>
+          <li class="nav-list-item"><a href="#products" class="nav-link"><i class="fas fa-envelope"></i> ПРОДУКЦИЯ</a></li>
+          <li class="nav-list-item"><a href="#work" class="nav-link"><i class="fas fa-th"></i> ПОРТФОЛИО</a></li>
+          <li class="nav-list-item"><a href="#team" class="nav-link"><i class="fas fa-user"></i> КОМАНДА</a></li>
+          <li class="nav-list-item"><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> КОНТАКТЫ</a></li> 
+        </ul>
+
+        <a href="javascript:void(0)" class="show-md nav-link" onclick="w3_open()">
+          <i class="fas fa-bars fa-2x"></i>
+        </a>
+      </nav>
     </div>
   </div>
 
@@ -59,14 +58,11 @@
   <!-- Header with full-height image -->
   <header class="main-header text-white" id="home">
     <div class="resp-wrapper">
+      <p class="logo-descriptor">Мастерская невероятного декора</p>
 
-      <p class="w3-hide-small logo-descriptor">Мастерская невероятного декора</p>
-      <div class="header-logo w3-hide-small">
+      <div class="header-logo hide-md">
         <img src="img/PAPERFORM_logo2.svg" width="300px" height="auto" />
       </div>
-
-      <div class="w3-hide-large w3-hide-medium logo-descriptor-mob">Мастерская невероятного
-        декора</div>
 
       <h3 class="main-heading">
         Делаем уникальные декорации, <span class="break-line">реквизит, бутафорию.</span>
@@ -94,7 +90,7 @@
 
 
   <!-- About Section -->
-  <section class="page-section bg-bluegray p-b-4" id="about">
+  <section class="page-section bg-bluegray" id="about">
     <div class="resp-wrapper">
 
       <h2 class="section-heading">
@@ -102,7 +98,7 @@
       </h2>
 
       <div class="layout-2-1">
-        <p class="">Мастерская <strong>PAPERFORM</strong> была организована в 2010 году, Иваном и
+        <p>Мастерская <strong>PAPERFORM</strong> была организована в 2010 году, Иваном и
           Ольгой. Поначалу мы
           занимались созданием вручную
           бумажных цветов и пиньят, постепенно развиваясь, осваивая новые технологии и материалы, переходя на новые
@@ -167,21 +163,24 @@
 
 
   <!-- услуги раздел -->
-    <section class="page-section bg-pink" id="products">
-        <h2 class="section-heading">
+    <section class="page-section p-b-0" id="products">
+        <h2 class="section-heading"> 
           <span class="text-white">НАШИ ПРОДУКТЫ:</span>
         </h2>
 
-        <section class="sub-section bg-red">
+        <section class="subsection bg-red">
           <div class="resp-wrapper">
-            <h3 class="text-center">
+            <h3 class="subsection__title text-center">
               <span class="">Объемные фигуры</span>
             </h3>
 
-            <p class="text-center">Наша мастерская уже долгое время занимается производством объемных полигональных фигур. В нашем ассортименте представлен как набор готовых объемных полигональных фигур, так и возможна разработка уникальных на заказ</p>
+            <p class="text-center">
+              Наша мастерская уже долгое время занимается производством объемных полигональных фигур. 
+              В нашем ассортименте представлен как набор готовых объемных полигональных фигур, так и возможна разработка уникальных на заказ
+            </p>
 
             <div class="layout-2-1">
-              <div class="grid-cell--border-rounded">
+              <div class="grid-cell lead-cell">
                 <h4>Фигуры стандартные</h4>
                 <p>Разработанные студией стандартные тиражируемые фигуры, доступные в короткий срок по фиксированным ценам.</p>
                 <p>Варианты материалов:</p>
@@ -189,10 +188,14 @@
                   <li>Картон</li>
                   <li>Пластик</li>
                 </ul>
-                <img class="" src="img/red-bear.jpg" alt="Полигональный медведь из пластика" width="100%" height="auto">
+
+                <div class="grid-cell--img-container">
+                  <img class="grid-cell--img" src="img/elki-600.jpg" alt="Fotozone Hexagonal for Riv'era" height="auto">
+                </div>
+
               </div>
 
-              <div class="grid-cell--border-rounded">
+              <div class="grid-cell">
                 <h4>Фигуры на заказ</h4>
                 <p>Каждая разработка уникальна, расчитывается индивидуально.</p>
                 <p>Варианты материалов:</p>
@@ -201,90 +204,122 @@
                   <li>Картон</li>
                   <li>Металл</li>
                 </ul>
-                <img class="w3-image w3-round-large" src="img/red-bear.jpg" alt="Полигональный медведь из пластика" width="100%" height="auto">
+
+                <div class="grid-cell--img-container">
+                  <img class="grid-cell--img" src="img/raiff-decor-600.jpg" alt="Fotozone Hexagonal for Riv'era" height="auto">
+                </div>
+
               </div>
             </div>
           </div>
         </section>
 
-        <section class="sub-section bg-greenyellow">
+        <section class="subsection bg-orange">
           <div class="resp-wrapper">
-            <h3 class="text-center">
-              <span class="">Оформление витрин</span>
-            </h3>
+
             <div class="layout-2-1">
-              <div class="grid-cell--border-rounded">
-                <img class="w3-image w3-round-large" src="img/vitriny-700.jpg" alt="Витрина Ahmadulina dreams" width="700"
-                height="auto">
+
+              <div class="grid-cell grid-cell--img-container lead-cell">
+                <img class="grid-cell--img" src="img/vitriny-600.jpg" alt="Buildings" height="auto">
               </div>
-              <div class="grid-cell--border-rounded">
+
+              <div class="grid-cell ">
+                <h3 class="text-center">
+                  <span class="">Оформление витрин</span>
+                </h3>
                 <p>Комплексное оформление, а также производство отдельных элементов витрин. Разработка элементов по эскизам
                   заказчика.</p>
                 <a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a>
               </div>
-
             </div>
-
-            
-
 
           </div>
         </section>
 
-        <section class="sub-section">
+        <section class="subsection bg-teal">
           <div class="resp-wrapper">
 
-            <h3 class="text-center">
-              <span class="w3-border-bottom">Декорации на заказ для телевидения, театра, кино.</span>
-            </h3>
-
             <div class="layout-2-1">
-              <div class="grid-cell--border-rounded">
-                <img class="" src="img/vitriny-700.jpg" alt="Витрина Ahmadulina dreams" width="100%"
-                  height="auto">
+
+              <div class="grid-cell grid-cell--img-container">
+                <img class="grid-cell--img" src="img/shkatulka-600.jpg" alt="Buildings" height="auto">
               </div>
-              <div class="grid-cell--border-rounded">
+
+              <div class="grid-cell grid-cell--desc lead-cell">
+                <h3 class="text-center">
+                  <span class="w3-border-bottom">Декорации на заказ для телевидения, театра, кино.</span>
+                </h3>
                 <p>Комплексное оформление, а также производство отдельных элементов витрин. Разработка элементов по эскизам
                   заказчика.</p>
                 <p><a href="#work" class="w3-button w3-black"><i class="fas fa-th"> </i> Посмотреть работы</a></p>
               </div>
+
             </div>
           </div>
         </section>
 
-        <section class="sub-section bg-blue">
+
+        <section class="subsection bg-purple">
           <div class="resp-wrapper">
-            <h3 class="text-center">
-              <span class="w3-border-bottom">Нестандатные конструкции</span>
-            </h3>
 
             <div class="layout-2-1">
-              <div class="grid-cell--border-rounded">
-                <img class="w3-image w3-round-large" src="img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+
+              <div class="grid-cell grid-cell--img-container lead-cell">
+                <img class="grid-cell--img" src="img/phzone_hexagon-600.jpg" alt="Buildings" height="auto">
               </div>
 
-              <div class="grid-cell--border-rounded">
+              <div class="grid-cell grid-cell--desc">
+                <h3 class="text-center">
+                  <span class="w3-border-bottom">Эксклюзивные Фотозоны</span>
+                </h3>
+                <p>Комплексное оформление, а также производство отдельных. Разработка элементов по эскизам
+                  заказчика.</p>
+                <p><a href="#work" class="w3-button w3-black"><i class="fas fa-th"> </i> Посмотреть работы</a></p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection bg-blue">
+          <div class="resp-wrapper">
+
+
+            <div class="layout-2-1">
+              <div class="grid-cell grid-cell--img-container">
+                <img class="grid-cell--img" src="img/phzone_hexagon-600.jpg" alt="Fotozone Hexagonal for Riv'era" height="auto">
+              </div>
+
+              <div class="grid-cell grid-cell--desc lead-cell">
+                <h3 class="text-center">
+                  <span class="">Нестандатные конструкции</span>
+                </h3>
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et
                   dolore.</p>
                 <ul class="">
                   <li>Эксклюзивные проекты</li>
                   <li>Мебель</li>
                 </ul>
-                <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Посмотреть работы</a></p>
+                <a href="#work" class="button button--black"><i class="fa fa-th"> </i> Посмотреть работы</a>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="sub-section bg-green">
+        <section class="subsection bg-green">
           <div class="resp-wrapper">
-
-            <h3 class="text-center">
-              <span class="w3-border-bottom">Плоские декорации</span>
-            </h3>
-
             <div class="layout-2-1">
-              <div class="grid-cell--border-rounded">
+
+              <div class="grid-cell grid-cell-img lead-cell"> 
+                <img class="" src="img/phone_buildings.jpg" alt="Buildings" width="100%" height="auto">
+              </div>
+              
+              <div class="grid-cell grid-cell--desc">
+                <h3 class="text-center">
+                  <span class="">Плоские декорации</span>
+                </h3>
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et
                   dolore.</p>
                 <ul>
@@ -294,32 +329,31 @@
                   <li>Многослойные диарамы</li>
                 </ul>
   
-                <a href="#work" class="w3-button w3-black"><i class="fas fa-th"> </i> Посмотреть работы</a>
+                <a href="#work" class="button button--black"><i class="fas fa-th"> </i> Посмотреть работы</a>
               </div>
 
-              <div class="grid-cell--border-rounded"> 
-                <img class="w3-image w3-round-large" src="img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-              </div>
             </div>
-
           </div>
         </section>
 
-        <section class="sub-section bg-bluegray">
+        <section class="subsection bg-bluegray">
           <div class="resp-wrapper">
-            <h3 class="text-center">
-              <span class="">Оформление площадок, эвенты</span>
-            </h3>
-
             <div class="layout-2-1">
-              <div class="">
+
+              <div class="grid-cell grid-cell-img"> 
+                <img class="" src="img/gorod-cvety-600.jpg" alt="Cvetochniy Jam Flowers" width="100%" height="auto">
+              </div>
+
+              <div class="grid-cell grid-cell--desc lead-cell">
+                <h3 class="text-center">
+                  <span class="">Оформление площадок, эвенты</span>
+                </h3>
                 <p>Изготовление и монтаж декораций для фестивалей, шоу, городских и частных мероприятий</p>
-                <p><a href="#work" class="w3-button w3-black"><i class="fas fa-th"> </i> Посмотреть работы</a></p>
-              </div>
+
+                <a href="#work" class="button button--black"><i class="fas fa-th"> </i> Посмотреть работы</a>
               
-              <div class="">
-                <img class="w3-image w3-round-large" src="img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
               </div>
+
             </div>
           </div>
         </section>
@@ -335,6 +369,9 @@
       <h2 class="w3-center section-heading">
         <span class="text-white">НАША ДРУЖНАЯ КОМАНДА</span>
       </h2>
+      <p class="section-description">
+        Вместе мы сила, многостаночники, хуячим без выходных
+      </p>
 
       <!-- Swiper -->
       <div class="swiper-container">
@@ -425,28 +462,32 @@
   </section>
 
   <!-- статистика раздел -->
-  <section class="page-section bg-pink p-b-100 text-white">
+  <section class="page-section bg-light text-white">
     <div class="resp-wrapper">
       <h2 class="section-heading text-center">
         <span class="text-white">Наша статистика</span>
       </h2>
 
+      <p class="section-description">
+        Мы выстрадали каждую из этих цифр!
+      </p>
+
       <div class="layout-4-2-1">
         <div class="statistic-cell">
-          <span class="">50+</span>
-          <br>Инсталляций и монтажей
+          <p class="stat-count">50<span>+</span></p>
+          <p class="stat-meaning">Инсталляций и монтажей</p>
         </div>
-        <div class="grid-cell">
-          <span class="">155+</span>
-          <br>Выполненных проектов
+        <div class="statistic-cell">
+          <p class="stat-count">155<span>+</span></p>
+          <p class="stat-meaning">Выполненных проектов<p>
         </div>
-        <div class="grid-cell">
-          <span class="">11+</span>
-          <br>Довольных клиентов
+        <div class="statistic-cell">
+          <p class="stat-count">11<span>+</span></p>
+          <p class="stat-meaning">Довольных клиентов</p>
         </div>
-        <div class="grid-cell">
-          <span class="">70+</span>
-          <br>Уникальных разработок
+        <div class="statistic-cell">
+          <p class="stat-count">70<span>+</span></p>
+          <p class="stat-meaning">Уникальных разработок</p>
         </div>
 
       </div>
@@ -454,22 +495,22 @@
   </section>
 
   <!-- галерея работ раздел -->
-  <section class="page-section p-b-100" id="work">
+  <section class="page-section p-b-100 bg-indigo" id="work">
     <div class="resp-wrapper">
       <h2 class="text-center section-heading">
-        <span class="w3-text-white">ГАЛЕРЕЯ РАБОТ</span>
+        <span class="text-white">ГАЛЕРЕЯ РАБОТ</span>
       </h2>
-      <p class="w3-center w3-large">
+      <p class="section-description text-white">
         Здесь лишь немногие примеры из огромного количества наших реализованных проектов
       </p>
 
+    
       <ul class="gallery-grid">
 
         <li class="gallery-card">
-          <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Полигональный бык из красного глянцевого пластика'>
+          <a href="single.html" class="gall-thumb" data-descr='Полигональный бык из красного глянцевого пластика'>
             <img src="img/red_bull-600.jpg" alt="Полигональный бык">
-          </div>
+          </a>
         </li>
 
         <li class="gallery-card">
@@ -578,7 +619,9 @@
       <h2 class="section-heading text-white">
         <span class="w3-text-white">НАШИ КЛИЕНТЫ</span>
       </h2>
-      <p class="text-center">С нами сотрудничают:</p>
+      <p class="section-description">
+        С нами сотрудничают:
+      </p>
 
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -602,6 +645,11 @@
             </div>
           </div>
 
+          <div class="swiper-slide">
+            <div class="client-logo">
+              <img src="img/clients/DM_logo_3_RGB.svg" alt="Detskiy Mir" width="80%" height="auto">
+            </div>
+          </div>
         </div>
 
         <!-- Add Pagination -->
@@ -611,93 +659,37 @@
     </div>
   </section>
 
-  <!-- Pricing Section 
-  <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
-    <h3>PRICING</h3>
-    <p class="w3-large">Choose a pricing plan that fits your needs.</p>
-    <div class="w3-row-padding" style="margin-top:64px">
-      <div class="w3-third w3-section">
-        <ul class="w3-ul w3-white w3-hover-shadow">
-          <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16"><b>10GB</b> Storage</li>
-          <li class="w3-padding-16"><b>10</b> Emails</li>
-          <li class="w3-padding-16"><b>10</b> Domains</li>
-          <li class="w3-padding-16"><b>Endless</b> Support</li>
-          <li class="w3-padding-16">
-            <h2 class="w3-wide">$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-      <div class="w3-third">
-        <ul class="w3-ul w3-white w3-hover-shadow">
-          <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
-          <li class="w3-padding-16"><b>25GB</b> Storage</li>
-          <li class="w3-padding-16"><b>25</b> Emails</li>
-          <li class="w3-padding-16"><b>25</b> Domains</li>
-          <li class="w3-padding-16"><b>Endless</b> Support</li>
-          <li class="w3-padding-16">
-            <h2 class="w3-wide">$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-      <div class="w3-third w3-section">
-        <ul class="w3-ul w3-white w3-hover-shadow">
-          <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-          <li class="w3-padding-16"><b>50GB</b> Storage</li>
-          <li class="w3-padding-16"><b>50</b> Emails</li>
-          <li class="w3-padding-16"><b>50</b> Domains</li>
-          <li class="w3-padding-16"><b>Endless</b> Support</li>
-          <li class="w3-padding-16">
-            <h2 class="w3-wide">$ 50</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  -->
-
   <!-- Contact Section -->
-
-  
-  <section class="page-section" id="contact">
+  <section class="page-section bg-black" id="contact">
     <div class="resp-wrapper">
       <h2 class="section-heading">
-        <span class="w3-text-white">НАШИ КОНТАКТЫ</span>
+        <span class="text-white">НАШИ КОНТАКТЫ</span>
       </h2>
-      <p class="text-center">Пишите, звоните, да найдите уж нас, наконец!
+      
+      <p class="section-description text-white">
+        Пишите, звоните, да найдите уж нас, наконец!
       </p>
 
-      <div class="contacts-row w3-row-padding" style="margin-top:64px">
-      <div class="text-left">
-        <ul class="contacts-list">
-          <li class="contacts-list__item"><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Москва, Зелeноград, ул. Заводская, д. 21А, стр.3</li>
-          <li class="contacts-list__item"><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Тел: +7 903 532-04-04</li>
-          <li class="contacts-list__item"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: razrabotka2@gmail.com
-          </li>
-        </ul>
-      </div>
 
-        <div class="contacts-map w3-half w3-section">
-          <a href=""></a>
-          <img src="img/map.jpg" alt="Зеленоград, ул.Заводская, 21А стр. 3" width="100%" height="auto">
+      <div class="layout-2-1">
+
+        <div class="grid-cell grid-cell-img lead-cell"> 
+          <a href="">
+            <img src="img/map.jpg" alt="Зеленоград, ул.Заводская, 21А стр. 3" width="100%" height="auto">
+          </a>
         </div>
-      </div>
 
+        <div class="grid-cell text-left text-white">
+          <ul class="contacts-list">
+            <li class="contacts-list__item"><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Москва, Зелeноград, ул. Заводская, д. 21А, стр.3</li>
+            <li class="contacts-list__item"><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Тел: +7 903 532-04-04</li>
+            <li class="contacts-list__item"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: razrabotka2@gmail.com
+            </li>
+          </ul>
+        </div>
+        </div>
 
-
+ 
       <p>Вы можете отправить нам сообщение:</p>
 
       <form action="/action_page.php" target="_blank">
@@ -734,134 +726,6 @@
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
-
-
-<p style="display: none;">
-  Изготовление декорации, реквизита и бутафории по индивидуальному заказу в Москве
-  Декорации на заказ для телевидения, театра, кино.
-  Изготовление декораций для концертов, фестивалей, шоу, городских и частных мероприятий.
-  Декорации для фотостудии, квеста, витрины, банкетного зала, офиса, ресторана, кафе, ночного клуба.
-  Изготовление реквизита и бутафории для театра, кино, сериалов, шоу.
-  Получить бесплатный расчет
-  Наши проекты изготовление декораций
-  Декорации на заказ для телевидения, театра и кино
-  Весь комплекс услуг по изготовлению декораций по индивидуальному заказу, начиная с разработки эскизов и заканчивая
-  монтажом декорации на съемочной площадке или театральной сцене.
-  Получить бесплатный расчет
-  Изготовление декораций для концертов, фестивалей, шоу, городских и частных мероприятий
-  Разработка дизайна декорации, 3D моделирование и зонирование пространства. Производство, доставка и монтаж декораций
-  любой сложности.
-  Оформление мероприятий высокого уровня.
-  Получить бесплатный расчет
-
-
-  Декорации для квеста, фотостудии, витрины, банкетного зала, офиса, ресторана, ночного клуба
-  Выполняем работу по созданию декораций для квестов "под ключ".
-  Изготовление декорации по эскизу заказчика или по эскизу нашего дизайнера. Декоративный дизайн и эксклюзивное
-  оформление
-  интерьеров помещений.
-  Получить бесплатный расчет
-  Изготовление реквизита и бутафории для театра, кино, сериалов, шоу
-  Создание высокохудожественной, точной копии предмета, по проекту заказчика, любого размера и сложности. Изготовим
-  реквизит с механизмами вращения, движения, с элементами трансформации.
-  Получить бесплатный расчет
-
-
-  Художественная роспись объектов любой сложности и любых размеров
-  Художественная роспись стен в Москве. Роспись стен - это уникальная возможность декорировать, обновить и сделать
-  уникальным внешний вид здания, церкви, любого дома и помещения.
-  Получить бесплатный расчет
-  Резка объемных фигур, букв и любых
-  объектов из пенопласта
-  Профессиональная фигурная резка пенопласта, любых форм и размеров. Резка выполняется на высокоточных станках.
-  Команда художников предаст яркий и реалистичный вид объекту.
-  Получить бесплатный расчет
-
-
-
-  Фрезеровка и гравировка на ЧПУ станке
-  ЧПУ станки со столами 2000х4000 мм. позволяют в промышленных масштабах фрезеровать и гравировать фанеру, дерево,
-  композит, мдф, дсп, пвх, оргстекло, поликарбонат. Создание вектора для ЧПУ на заказ.
-  Последующая обработка, покраска и сборка проектов.
-  Получить бесплатный расчет
-  Изготовление реалистичных масок и костюмов на заказ любой сложности
-  Изготовим реалистичные маски, костюмы, части тела из силикона, для Хэллоуина, фильма ужасов или розыгрыша.
-  Получить бесплатный расчет
-  Нам доверяют
-
-
-  Получите бесплатный расчет стоимости работ и консультацию от наших мастеров
-  Введите свои контактные данные
-  для дальнейшей связи с Вами
-  Имя
-  Email *
-  Телефон
-  Краткое описание проекта
-  Получить бесплатный расчет
-  Наши проекты в instagram
-
-  experimental_workshop
-  123 публикаций 1 204 подписчиков Подписки: 1 657
-
-  ​
-
-  8 (968) 784-11-14
-  exworkshop@yandex.ru
-  ​
-  ИЗГОТОВЛЕНИЕ ДЕКОРАЦИЙ
-  Мастерская "Exwo"
-
-  Наша команда изготавливает декорации, реквизит и бутафорию по индивидуальному заказу в Москве.
-  ​
-  WWW.EXWO.RU
-
-  Контакты нашей мастерской
-  Контактные телефоны:
-
-
-
-  +7 (968) 784-11-14 Александр
-
-  +7 (966) 195-41-64 Андрей
-
-  ​
-
-  Наша почта:
-
-
-
-  bel111@bk.ru
-
-  exworkshop@yandex.ru
-
-  ​
-
-  Время работы мастерской:
-
-
-
-  пн - пт. С 10:00 - 19:00,
-
-  сб - вс. - выходной.
-
-  ​
-
-  Адрес мастерской:
-
-  ​
-
-  Мастерская "Экспериментальный цех"
-
-  Стрельбищенский переулок д. 5 Москва, Россия
-
-  Хотите узнать стоимость? Если у Вас есть вопросы, просто заполните форму, и Мы с Вами свяжемся.
-
-  Имя
-  Email *
-  Телефон *
-  Сообщение
-  Отправить
-</p>
-
 </html>

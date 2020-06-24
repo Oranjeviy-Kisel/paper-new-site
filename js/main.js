@@ -1,6 +1,5 @@
 $( document ).ready(function() {
-  
-  
+
     var swiperTeam = new Swiper('.swiper-container', {
       slidesPerView: 1,
       spaceBetween: 10,
@@ -26,6 +25,16 @@ $( document ).ready(function() {
     });
 
 });
+
+
+window.addEventListener("scroll", function(){
+  window.scrollY>100
+    ?
+    document.querySelector(".main-nav-outer").classList.add("main-nav-outer--sticky")
+    :
+    document.querySelector(".main-nav-outer").classList.remove("main-nav-outer--sticky")
+})
+
 
 
 

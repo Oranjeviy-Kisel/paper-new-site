@@ -1,0 +1,79 @@
+<style>
+--blue: #007bff;
+--indigo: #6610f2;
+--purple: #6f42c1;
+--pink: #e83e8c;
+--red: #dc3545;
+--orange: #fd7e14;
+--yellow: #ffc107;
+--green: #28a745;
+--teal: #20c997;
+--cyan: #17a2b8;
+--white: #fff;
+--gray: #6c757d;
+--gray-dark: #343a40;
+--primary: #007bff;
+--secondary: #6c757d;
+--success: #28a745;
+--info: #17a2b8;
+--warning: #ffc107;
+--danger: #dc3545;
+--light: #f8f9fa;
+--dark: #343a40;
+--breakpoint-xs: 0;
+--breakpoint-sm: 576px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 992px;
+--breakpoint-xl: 1200px;
+
+
+--simple-translate-main-text: #0c0c0d;
+--simple-translate-sub-text: #737373;
+--simple-translate-line: #ededf0;
+--simple-translate-button: #d7d7db;
+--simple-translate-highlight: #5595ff;
+--simple-translate-main-bg: #ffffff;
+
+<script>
+{key:"render",value:function(){window.addEventListener("scroll",function(){window.scrollY>100?document.querySelector(".header--fixed").classList.add("sticky"):document.querySelector(".header--fixed").classList.remove("sticky")})
+</script>
+
+* {
+
+    box-sizing: border-box;
+
+}
+*, ::after, ::before {
+
+    box-sizing: border-box;
+
+}
+body {
+    font-size: 14px;
+    line-height: 1.71429;
+    font-family: Poppins,sans-serif;
+    color: #1d1d24;
+    font-weight: 400;
+}
+.header-area.header--fixed.sticky {
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+.header-area.header--fixed {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    background: transparent;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+</style>
+
+<body>
+<div class="header-wrapper" id="header-wrapper">
+<div class="header-left"><div class="logo"><a href="/"><img class="logo-1" src="/assets/images/logo/logo-light.png" alt="Logo Images"><img class="logo-2" src="/assets/images/logo/logo-all-dark.png" alt="Logo Images"></a></div></div><div class="header-right"><nav class="mainmenunav d-lg-block"><ul class="mainmenu"><li class="is-current"><a href="#home">Home</a></li><li class=""><a href="#service">Service</a></li><li class=""><a href="#about">About</a></li><li class=""><a href="#portfolio">Portfolio</a></li><li class=""><a href="#team">Team</a></li><li class=""><a href="#testimonial">Testimonial</a></li><li class=""><a href="#blog">Blog</a></li><li class=""><a href="#contact">Contact</a></li></ul></nav><div class="header-btn"><a class="rn-btn" href="https://themeforest.net/checkout/from_item/25457315?license=regular"><span>buy now</span></a></div><div class="humberger-menu d-block d-lg-none pl--20"><span class="menutrigger text-white"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span></div><div class="close-menu d-block d-lg-none"><span class="closeTrigger"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></div></div></div>	

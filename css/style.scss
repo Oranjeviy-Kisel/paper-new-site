@@ -1,37 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&display=swap');
 
-// Color variables
-$darkgrey: #222226;
-$page-white: #ffffff;
-$teal: #009688;
-$bluegray: #607d8b;
 
+//breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Color variables
+$colorsMap: (
+  blue: #007bff,
+  indigo: #6610f2,
+  purple: #6f42c1,
+  pink: #e83e8c,
+  red: #dc3545,
+  orange: #fd7e14,
+  yellow: #ffc107,
+  green: #28a745,
+  teal: #20c997,
+  cyan: #17a2b8,
+  page-white: #fff,
+  gray: #6c757d,
+  darkgrey: #343a40,
+  primary: #007bff,
+  secondary: #6c757d,
+  success: #28a745,
+  info: #17a2b8,
+  warning: #ffc107,
+  danger: #dc3545,
+  light: #f8f9fa,
+  bluegray: #607d8b,
+  black: #000000
+);
+
+
+$darkgrey: map-get( $colorsMap, darkgrey);
+$bluegray: map-get( $colorsMap, bluegray);
+$page-white: map-get( $colorsMap, page-white);
+$black: map-get( $colorsMap, black);
 
 //backgrounds
-.bg-red{
-  background-color: red;
-}
-.bg-green{
-  background-color: green;
-}
-.bg-blue{
-  background-color: blue;
-  color: white;
-}
-.bg-pink{
-  background-color: pink;
-}
-.bg-greenyellow{
-  background-color: greenyellow;
-}
-.bg-darkblue{
-  background-color: darkblue;
-  color: white;
-}
-
-.bg-bluegray{
-  background-color: $bluegray;
-  color: white;
+@each $colorName, $colorVal in $colorsMap {
+  #{'.bg-' + $colorName } {
+    background-color: $colorVal;
+  }
 }
 
 //   text-colors  //
@@ -51,7 +64,6 @@ $bluegray: #607d8b;
 .text-left{
   text-align: left;
 }
-
 
 *{
   box-sizing: border-box;
@@ -74,6 +86,7 @@ body{
   min-width: 320px;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 16px;
+  position: relative;
 }
 
 .visually-hidden {
@@ -93,6 +106,23 @@ body{
   margin: 0;
 }
 
+
+.show-md{
+  display: none;
+
+  @media screen and ( max-width: $breakpoint-md){
+    display: inline-block;
+  }
+}
+
+.hide-md{
+  display: inline-block;
+
+  @media screen and ( max-width: $breakpoint-md){
+    display: none !important;
+  }
+}
+
 .break-line{
   display: block;
 }
@@ -105,31 +135,77 @@ section, p {
   margin: 0 auto;
 }
 
+
+
+
+//buttons
+
+.button{
+  display: inline-block;
+  padding: 20px;
+  text-decoration: none;
+
+  &--black{
+    background-color: $black;
+    color: $page-white;
+  }
+}
+
 .page-section{
-  padding-top: 100px;
-}
-
-
-.layout-4-2-1{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-}
-
-.layout-3-2-1{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
+  padding: 5rem 0;
 }
 
 .layout-2-1{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.grid-cell{
+  display: block;
+  width: 45%;
+  height: 100%;
+  align-self: stretch;
+  flex-grow: 1;
+
+  &--img-container{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &--img{
+    object-fit: cover; 
+  }
+  &--desc{
+  }
+}
+
+.lead-cell{
+  border-color: red;
+
+  @media screen and (min-width: 769px){
+    order: -1;
+    margin-right: 27px;
+  }
+  
+}
+
+@media screen and (max-width: 768px){
+  .grid-cell{
+    width: 100%;
+  }
+  .grid-cell:first-of-type{
+    margin: 0 0 1em 0;
+  }
+}
+
+.layout-4-2-1,
+.layout-3-2-1 {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
-
-  @media screen and (min-width: 769px){
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
@@ -148,11 +224,11 @@ section, p {
   }
 
   .layout-3-2-1{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .layout-4-2-1{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -170,13 +246,14 @@ section, p {
   }
 }
 
+
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   .resp-wrapper{
     padding: 0 30px;
   }
 
   .layout-3-2-1{
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .layout-4-2-1{
@@ -198,18 +275,6 @@ section, p {
   }
 }
 
-.grid-cell{
-  box-shadow: 1px 1px 1px 1px black;
-
-  &--border-rounded{
-    border: 2px solid $page-white;
-    border-radius: 1rem;
-  }
-}
-
-.page-header{
-  height: 50px;
-}
 
 //margins
 .m-t-1{
@@ -220,6 +285,10 @@ section, p {
 }
 .m-t-3{
   margin-top: 3em;
+}
+
+.p-b-0{
+  padding-bottom: 0;
 }
 
 .p-b-1{
@@ -248,6 +317,55 @@ section, p {
     margin-right: 0;
   }
 }
+//main-nav
+.main-nav-outer{
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+
+  &--sticky{
+    background-color: rgba(0, 2, 3, 0.8);
+    position: fixed;
+    transform: translateY(0);
+    z-index: 999;
+  }
+}
+
+.main-nav{
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.nav-links{
+  display: flex;
+  @extend %list-reset;
+}
+
+.nav-list-item:not(:last-child){
+  margin-right: 2rem;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: $page-white;
+
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+.navbar-logo{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  border: 1px solid red;
+}
+
 
 
 /* Full height image header */
@@ -257,17 +375,9 @@ section, p {
   background-size: cover;
   background-image: url("../img/header-bg-main.jpg");
   min-height: 100%;
+  text-align: center;
+  
 }
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-.navbar-logo{
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-
 .main-heading{
   font-weight: 200;
   line-height: 1.5em;
@@ -276,7 +386,7 @@ section, p {
   margin-top: 1em;
 
   @media screen and (max-width: 576px) {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
@@ -309,21 +419,24 @@ section, p {
   text-transform: uppercase;
   font-size: 1em;
   letter-spacing: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
+
+  @media screen and (max-width: $breakpoint-md){
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 10px;
+    margin-bottom: 1em;
+    padding: 0 70px;
+  }
 }
 
-.logo-descriptor-mob{
-  font-weight: 700;
-  line-height: 1.4em;
-  text-transform: uppercase;
-  font-size: 2em;
-  letter-spacing: 10px;
-  margin-bottom: 1em;
-}
+//стили секшнов
 
 .section-heading{
   text-align: center;
-  margin-bottom: 2em;
+  margin: 0 0 2em 0;
   position: relative;
   font-size: 2em;
 
@@ -334,7 +447,7 @@ section, p {
 
 .section-heading span{
   position : relative;
-  background-color: $darkgrey;
+  background-color: map-get( $colorsMap, darkgrey );
   padding: 5px 15px 5px 11px ;
 }
 
@@ -343,7 +456,7 @@ section, p {
   position: absolute;
   content: "";
   display: block;
-  background-color: $darkgrey;
+  background-color:  map-get( $colorsMap, darkgrey );
   top: 0;
   transform: skewX(-17deg);
   height: 100%;
@@ -357,6 +470,26 @@ section, p {
 .section-heading span::after{
   right: -8px;
   width: 15px;
+}
+
+.section-description{
+  text-align: center;
+  margin: 0 0 3rem 0;
+  font-size: 1.4rem;
+}
+
+
+.subsection{
+  padding: 2rem 0 2rem 0;
+
+  &__title{
+    margin: 0 0 2rem 0;
+    font-size: 1.6rem;
+  }
+
+  &__descr{ 
+    color: red;
+  }
 }
 
 
@@ -377,15 +510,15 @@ section, p {
 }
 
 .advantage{
-  background: $page-white url('../img/bg-abstr-01.svg') center top -250px no-repeat;
+  background:  map-get( $colorsMap, page-white ) url('../img/bg-abstr-01.svg') center top -250px no-repeat;
   background-size: cover;
-  box-shadow: 0 2px 10px -2px $darkgrey;
+  box-shadow: 0 2px 10px -2px  map-get( $colorsMap, darkgrey );;
   border-radius: 8px;
   padding: 3em 1em 2em 1em;
-  color: $darkgrey;
+  color:  map-get( $colorsMap, darkgrey );
 
   &__icon{
-    color: $page-white;
+    color: map-get( $colorsMap, page-white );
     text-align: center;
   }
   
@@ -415,7 +548,6 @@ section, p {
 }
 
 .team-card{
-  background: #fd0;
   padding: 20px 20px 30px 20px;
 
   @media screen and (max-width: 640px) {
@@ -426,7 +558,40 @@ section, p {
     width: 100%;
   }
 }
+//Статистика
 
+.statistic-cell{
+  color: map-get( $colorsMap, darkgrey);
+  text-align: center;
+  box-shadow: 0 0 0 1px map-get( $colorsMap, darkgrey);
+  padding: 0 0 2em 0;
+  transition: all 0.4s;
+
+  .stat-count{
+    font-size: 5rem;
+    font-weight: 700; 
+    
+    color: lighten( $darkgrey, 20%);
+    span{
+      font-weight: 200;
+      color: lighten($darkgrey, 30%);
+    }
+  }
+  .stat-meaning{
+    text-transform: uppercase;
+    padding: 0 1em;
+  }
+
+  &:hover{
+    box-shadow: 0 0 0 8px $bluegray;
+  }
+
+  &:hover span{
+    display: inline-block;
+    transform:  rotateZ(180deg);
+    transition: all 0.4s;
+  }
+}
 
 // Галерея сетка
 .gallery-grid{
