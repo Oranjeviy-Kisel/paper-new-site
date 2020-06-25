@@ -46,7 +46,7 @@
   </div>
 
   <!-- Sidebar on small screens when clicking the menu icon -->
-  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-large"
+  <nav class="sidebar"
     style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">×</a>
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">О НАС</a>
@@ -223,7 +223,7 @@
                 <img class="grid-cell--img" src="img/vitriny-600.jpg" alt="Buildings" height="auto">
               </div>
 
-              <div class="grid-cell ">
+              <div class="grid-cell grid-cell--desc">
                 <h3 class="text-center">
                   <span class="">Оформление витрин</span>
                 </h3>
@@ -251,7 +251,7 @@
                 </h3>
                 <p>Комплексное оформление, а также производство отдельных элементов витрин. Разработка элементов по эскизам
                   заказчика.</p>
-                <p><a href="#work" class="w3-button w3-black"><i class="fas fa-th"> </i> Посмотреть работы</a></p>
+                <a href="#work" class="button button--black"><i class="fas fa-th"> </i> Посмотреть работы</a>
               </div>
 
             </div>
@@ -261,7 +261,6 @@
 
         <section class="subsection bg-purple">
           <div class="resp-wrapper">
-
             <div class="layout-2-1">
 
               <div class="grid-cell grid-cell--img-container lead-cell">
@@ -274,7 +273,7 @@
                 </h3>
                 <p>Комплексное оформление, а также производство отдельных. Разработка элементов по эскизам
                   заказчика.</p>
-                <p><a href="#work" class="w3-button w3-black"><i class="fas fa-th"> </i> Посмотреть работы</a></p>
+                <a href="#work" class="button button--black"><i class="fas fa-th"> </i> Посмотреть работы</a>
               </div>
 
             </div>
@@ -430,7 +429,7 @@
 
         <!-- slide 5 -->
         <div class="swiper-slide team-card">
-          <img src="img/Tim.jpg" alt="Tim Smirnov photo" style="width:100%">
+          <img src="img/tim.jpg" alt="Tim Smirnov photo" style="width:100%">
 
           <div class="person-info">
           <h4 class="person-name">Тимофей Смирнов</h4>
@@ -495,78 +494,81 @@
   </section>
 
   <!-- галерея работ раздел -->
-  <section class="page-section p-b-100 bg-indigo" id="work">
+  <section class="page-section p-b-100 gallery-section" id="work">
     <div class="resp-wrapper">
       <h2 class="text-center section-heading">
         <span class="text-white">ГАЛЕРЕЯ РАБОТ</span>
       </h2>
-      <p class="section-description text-white">
+      <p class="section-description">
         Здесь лишь немногие примеры из огромного количества наших реализованных проектов
       </p>
-
+      
+      <ul class="gallery-sorter">
+        <li><a href="" class="sorter-category" >Все</a></li>
+        <li><a href="" class="sorter-category">Объемные Фигуры</a></li>
+        <li><a href="" class="sorter-category">Мебель</a></li>
+        <li><a href="" class="sorter-category">Фотозоны</a></li>
+        <li><a href="" class="sorter-category">Диарамы</a></li>
+      </ul>
     
       <ul class="gallery-grid">
 
-        <li class="gallery-card">
-          <a href="single.html" class="gall-thumb" data-descr='Полигональный бык из красного глянцевого пластика'>
-            <img src="img/red_bull-600.jpg" alt="Полигональный бык">
+        <li class="gallery-card" data-descr='Полигональный бык из красного глянцевого пластика'>
+          <a href="single.html" class="gallery-link">
+              <img src="img/red_bull-600.jpg" alt="Полигональный бык">
+          </a>
+        </li>
+
+        <li class="gallery-card" data-descr='Голографический рубин для салона DeBeers в Москве'>
+          <a href="single.html" class="gallery-link">
+            <img src="img/ruby-gem-plastic-600.jpg" alt="Голографический рубин из пластика">
+          </a>
+        </li>
+
+        <li class="gallery-card" data-descr='Полигональные декорации для рекламного ролика Raiffizen банка'>
+          <a href="single.html" class="gallery-link">
+            <img src="img/raiff-decor.jpg" alt="Raiffizen реклама съемки">
+          </a>
+        </li>
+
+        <li class="gallery-card" data-descr='Оформление полигональными элементами витрины премиум-магазина одежды в г.Сочи'>
+          <a href="single.html" class="gallery-link">
+            <img src="img/sochi-vitrina-600.jpg" alt="Витрина в Сочи">
           </a>
         </li>
 
         <li class="gallery-card">
-          <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Голографический рубин для салона DeBeers в Москве'>
-            <img src="img/ruby-gem-plastic-600.jpg" alt="Голографический рубин из пластика">
-          </div>
-        </li>
-
-        <li class="gallery-card">
-          <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Полигональные декорации для рекламного ролика Raiffizen банка'>
-            <img src="img/raiff-decor.jpg" alt="Raiffizen реклама съемки">
-          </div>
-        </li>
-
-        <li class="gallery-card">
-          <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Оформление полигональными элементами витрины премиум-магазина одежды в г.Сочи'>
-            <img src="img/sochi-vitrina-600.jpg" alt="Витрина в Сочи">
-          </div>
-        </li>
-
-        <li class="gallery-card">
-          <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Двусторонняя фотозона "Золотые и серебрянные тропики" для ТЦ "Ривьера"'>
+          <a href="single.html" class="gallery-link" data-descr='Двусторонняя фотозона "Золотые и серебрянные тропики" для ТЦ "Ривьера"'>
+            
             <img src="img/phzone_tropic-600.jpg" alt="Фотозона Тропики">
-          </div>
+          </a>
         </li>
 
-        <li class="gallery-card">
-          <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Фотозона "Зеркальный шестигранник" для ТЦ "Ривьера"'>
+        <li class="gallery-card" data-descr='Фотозона "Зеркальный шестигранник" для ТЦ "Ривьера"'>
+          <a href="single.html" class="gallery-link">
+            
             <img src="img/phzone_hexagon-600.jpg" alt="Фотозона Зеркальный Шестигранник">
-          </div>
+          </a>
         </li>
 
-        <li class="gallery-card">
-          <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Инсталляция "Подводный риф" компании "Берег" на выставке Росупак 2019'>
+        <li class="gallery-card" data-descr='Инсталляция "Подводный риф" компании "Берег" на выставке Росупак 2019'>
+          <a href="single.html" class="gallery-link">
+            
             <img src="img/bereg-reef-600.jpg" alt="Bereg Reef installation photo" />
-          </div>
+          </a>
         </li>
 
-        <li class="gallery-card">
-          <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Полигональный медведь из пластика для Duty Free Moscow'>
+        <li class="gallery-card" data-descr='Полигональный медведь из пластика для Duty Free Moscow'>
+          <a href="single.html" class="gallery-link">
+            
             <img src="img/red-bear-600.jpg" alt="Red Plastic Bear" />
-          </div>
+          </a>
         </li>
 
-        <li class="gallery-card">
-          <div class="gall-thumb" onclick="onClick(this)"
-            data-descr='Кухонная мебель для съемок детской передачи'>
+        <li class="gallery-card" data-descr='Кухонная мебель для съемок детской передачи'>
+          <a href="single.html" class="gallery-link">   
             <img src="img/kuhnya-600.jpg" alt="Kitchen for children" />
-          </div>
+          </a>
         </li>
 
       </ul>
@@ -640,7 +642,7 @@
           </div>
 
           <div class="swiper-slide">
-            <div class="client-logo">
+            <div class="client-logo bg-teal">
               <img src="img/clients/akhmadullina.svg" alt="Alena Akhmadulina" width="80%" height="auto">
             </div>
           </div>
@@ -687,23 +689,37 @@
             </li>
           </ul>
         </div>
+
+      </div>
+
+      <form class="send-message" action="/action_page.php" target="_blank">
+        <p class="text-white" >Вы можете отправить нам сообщение:</p>
+
+        <div>
+          <label for="username">Представьтесь</label>
+          <input class="" type="text" name="user-name" id="username" required>
         </div>
 
- 
-      <p>Вы можете отправить нам сообщение:</p>
+        <div>
+          <label for="useremail">Ваш e-mail</label>
+          <input class="" type="text" name="user-email" id="useremail" required>
+        </div>
 
-      <form action="/action_page.php" target="_blank">
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Ваше имя" required="" name="Name"></p>
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Ваш e-mail" required="" name="Email"></p>
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Тема" required="" name="Subject"></p>
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Текст сообщения" required="" name="Message">
-        </p>
-        <p>
-          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-            <i class="fas fa-paper-plane"></i> ОТПРАВИТЬ
-          </button>
-        </p>
+        <div>
+          <label for="useremail">Тема сообщения</label>
+          <input class="" type="text"  name="subject" id="subject" required>
+        </div>
+
+        <div>
+          <label for="useremail">Ваш e-mail</label>
+          <textarea name="user-message" id="" cols="40" rows="10"  placeholder="Текст сообщения" required></textarea>
+        </div>
+
+        <button class="button" type="submit">
+          <i class="fas fa-paper-plane"></i> ОТПРАВИТЬ
+        </button>
       </form>
+
     </div>
   </section>
   <!-- End Contact Section -->

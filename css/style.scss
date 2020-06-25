@@ -39,6 +39,9 @@ $darkgrey: map-get( $colorsMap, darkgrey);
 $bluegray: map-get( $colorsMap, bluegray);
 $page-white: map-get( $colorsMap, page-white);
 $black: map-get( $colorsMap, black);
+$indigo: map-get( $colorsMap, indigo);
+
+
 
 //backgrounds
 @each $colorName, $colorVal in $colorsMap {
@@ -178,7 +181,19 @@ section, p {
   &--img{
     object-fit: cover; 
   }
+
   &--desc{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 3rem;
+    @media screen and (max-width: $breakpoint-md) {
+      padding: 0 2rem;
+    }
+
+    button{
+      margin-top: auto;
+      align-self: flex-start;
+    }
   }
 }
 
@@ -367,13 +382,11 @@ section, p {
 }
 
 
-
 /* Full height image header */
 .main-header{
   padding: 200px 0 50px 0;
-  background-position: center;
+  background: $indigo url("../img/header-bg-main.jpg") center no-repeat;
   background-size: cover;
-  background-image: url("../img/header-bg-main.jpg");
   min-height: 100%;
   text-align: center;
   
@@ -480,7 +493,7 @@ section, p {
 
 
 .subsection{
-  padding: 2rem 0 2rem 0;
+  padding: 3rem 0 3rem 0;
 
   &__title{
     margin: 0 0 2rem 0;
@@ -489,6 +502,10 @@ section, p {
 
   &__descr{ 
     color: red;
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    padding: 6rem 0 6rem 0;
   }
 }
 
@@ -593,12 +610,45 @@ section, p {
   }
 }
 
-// Галерея сетка
+// Галерея
+.gallery-section{
+  background-color: $page-white;
+}
+
+.gallery-sorter{
+  @extend %list-reset;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  li:not(:last-child){
+    margin-right: 20px;
+  }
+}
+
+.sorter-category{
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: $bluegray;
+  transition: all 0.25s;
+  transition-timing-function: ease-in-out;
+
+  &:hover{
+    box-shadow: 0 2px 0 0 $bluegray;
+  }
+  
+}
+
 .gallery-grid{
   @extend %list-reset;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  width: 100%;
 
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr 1fr;
@@ -611,40 +661,77 @@ section, p {
 .gallery-card{
   background-color: $darkgrey;
   box-shadow: 0 2px 12px -2px lighten($darkgrey, 33%);
-  border-radius: 8px;
-}
-
-.gall-thumb{
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
-.gall-thumb img{
-  width: 100%;
-  height: auto;
-}
-
-.gall-thumb::before{
+.gallery-card::after{
+  box-sizing: border-box;
+  display: block;
   content: attr(data-descr);
-  opacity: 0;
-  width: 100%;
-  height: 100%;
   position: absolute;
+  width: 100%;
+  min-height: 30%;
+  padding: 40px;
   background-color: rgba(255,255,255,0.78);
-  left: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  bottom: 0;
   text-align: center;
-  transform: translateY(-40%);
-  transition: all 0.5s;
-  font-size: 1em;
+  // transform: translateY(-40%);
+  // transition: all 0.5s;
+  // font-size: 1em;
 }
-.gall-thumb:hover::before{
-  opacity: 1;
-  transform: translateY(0);
+// .gall-thumb:hover::after{
+//   opacity: 1;
+//   transform: translateY(0);
+// }
+
+.gallery-link{
+  display: block;
+  width: 100%;
+  
+  text-decoration: none;
+
+
+  img{
+    width:100%;
+    display: block;
+    object-fit: scale-down;
+  }
 }
+
+
+//Contacts
+
+.send-message{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $bluegray;
+
+  p{
+    flex-grow: 1;
+  }
+
+  div{ 
+    flex-basis: 75%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 40px 0 40px 0;
+  }
+
+  label{
+    position: absolute;
+  }
+
+  input{
+    border: 1px solid $black;
+    background-color: $page-white;
+    flex-basis: 75%;
+    flex-grow: 1;
+  }
+}
+
 
 
 //clients
