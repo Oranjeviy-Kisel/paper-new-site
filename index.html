@@ -48,7 +48,7 @@
   <!-- Sidebar on small screens when clicking the menu icon -->
   <nav class="sidebar"
     style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">×</a>
+    <a href="" class="w3-bar-item w3-button w3-large w3-padding-16">×</a>
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">О НАС</a>
     <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">КОМАНДА</a>
     <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">ПОРТФОЛИО</a>
@@ -384,7 +384,7 @@
             <h4 class="person-name">Иван Новиков</h4>
             <p class="person-profession">Директор, главный конструктор</p>
             <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <a class="w3-button w3-border w3-border-black"><i class="fas fa-envelope"></i> Написать
+            <a class="page-button page-button--outline"><i class="fas fa-envelope"></i> Написать
               письмо</a>
           </div>
         </div>
@@ -397,7 +397,7 @@
             <h4 class="person-name">Ольга Галанина</h4>
             <p class="person-profession">Исполнительный директор, декоратор</p>
             <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <a class="w3-button w3-border w3-border-black"><i class="fas fa-envelope"></i> Написать
+            <a class="page-button page-button--outline"><i class="fas fa-envelope"></i> Написать
               письмо</a>
           </div>
         </div>
@@ -409,7 +409,7 @@
             <h4 class="person-name">Юлия Пленкова</h4>
             <p class="person-profession">Менеджер проектов, декоратор</p>
             <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <a class="w3-button w3-border w3-border-black"><i class="fas fa-envelope"></i> Написать
+            <a class="page-button page-button--outline" href="#"><i class="fas fa-envelope"></i> Написать
               письмо</a>
           </div>
         </div>
@@ -422,7 +422,7 @@
           <h4 class="person-name">Денис Хохлов</h4>
           <p class="person-profession">Технический дизайнер</p>
           <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <a class="w3-button w3-border w3-border-black"><i class="fas fa-envelope"></i> Написать
+          <a class="page-button page-button--outline" href="#"><i class="fas fa-envelope"></i> Написать
             письмо</a>
           </div>
         </div>
@@ -432,11 +432,11 @@
           <img src="img/tim.jpg" alt="Tim Smirnov photo" style="width:100%">
 
           <div class="person-info">
-          <h4 class="person-name">Тимофей Смирнов</h4>
-          <p class="person-profession">Главный технолог</p>
-          <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <a class="w3-button w3-border w3-border-black"><i class="fas fa-envelope"></i> Написать
-            письмо</a>
+            <h4 class="person-name">Тимофей Смирнов</h4>
+            <p class="person-profession">Главный технолог</p>
+            <p class="person-about">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <a class="page-button page-button--outline" href="#"><i class="fas fa-envelope"></i> Написать
+              письмо</a>
           </div>
         </div>
 
@@ -447,7 +447,7 @@
             <h4 class="person-name">Наталья Лев</h4>
             <p class="person-profession">Декоратор-сборщик</p>
             <p class="person-about">Занимается сборкой изделий и декораций 3 года</p>
-            <a class="w3-button w3-border w3-border-black w3-disabled"><i class="fas fa-envelope"></i> Написать
+            <a class="page-button page-button--outline"><i class="fas fa-envelope"></i> Написать
                 письмо</a>
           </div>
         </div>
@@ -692,30 +692,31 @@
 
       </div>
 
+      <h4 class="contacts-heading text-white" >Вы можете отправить нам сообщение:</h4>
+
       <form class="send-message" action="/action_page.php" target="_blank">
-        <p class="text-white" >Вы можете отправить нам сообщение:</p>
-
-        <div>
-          <label for="username">Представьтесь</label>
-          <input class="" type="text" name="user-name" id="username" required>
+        <div class="half">
+          <label class="form-label text-white" for="username">Представьтесь:</label>
+          <input class="text-white" type="text" name="user-name" id="username" required>
         </div>
 
-        <div>
-          <label for="useremail">Ваш e-mail</label>
-          <input class="" type="text" name="user-email" id="useremail" required>
+        <div class="half">
+          <label class="form-label text-white" for="useremail">Ваш e-mail:</label>
+          <input class="text-white" type="text" name="user-email" id="useremail" required>
         </div>
 
-        <div>
-          <label for="useremail">Тема сообщения</label>
-          <input class="" type="text"  name="subject" id="subject" required>
+        <div class="full">
+          <label class="form-label text-white" for="subject" placeholder="Введите тему">Тема сообщения:</label>
+          <input class="text-white" type="text"  name="subject" id="subject" required>
         </div>
 
-        <div>
-          <label for="useremail">Ваш e-mail</label>
-          <textarea name="user-message" id="" cols="40" rows="10"  placeholder="Текст сообщения" required></textarea>
+        <div class="full">
+          <label class="form-label text-white" for="user-message">Ваше сообщение:</label>
+          <textarea class="text-white" name="user-message" id="" cols="40" rows="10"  placeholder="Текст сообщения" required></textarea>
         </div>
 
-        <button class="button" type="submit">
+        
+        <button class="button button--outline block-button" type="submit">
           <i class="fas fa-paper-plane"></i> ОТПРАВИТЬ
         </button>
       </form>
@@ -725,7 +726,7 @@
   <!-- End Contact Section -->
 
   <!-- Footer -->
-  <footer class="text-center bg-darkblue">
+  <footer class="page-footer text-center bg-darkblue">
     <div class="resp-wrapper">
       <a href="#home" class="w3-button w3-light-grey"><i class="fas fa-arrow-up"></i>Наверх</a>
 

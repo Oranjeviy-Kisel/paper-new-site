@@ -177,15 +177,23 @@ section, p {
   margin: 0 auto;
 }
 
-.button {
+.page-button {
   display: inline-block;
   padding: 20px;
   text-decoration: none;
 }
 
-.button--black {
+.page-button--black {
   background-color: #000000;
   color: #fff;
+}
+
+.page-button--outline {
+  border: 1px solid red;
+}
+
+.block-button {
+  display: block;
 }
 
 .page-section {
@@ -669,6 +677,19 @@ section, p {
   width: 100%;
 }
 
+.team-card .person-name {
+  color: #343a40;
+}
+
+.team-card .person-profession {
+  font-weight: 700;
+  color: #343a40;
+}
+
+.team-card .person-about {
+  color: red;
+}
+
 .statistic-cell {
   color: #343a40;
   text-align: center;
@@ -803,50 +824,6 @@ section, p {
      object-fit: scale-down;
 }
 
-.send-message {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #607d8b;
-}
-
-.send-message p {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.send-message div {
-  -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: relative;
-  margin: 40px 0 40px 0;
-}
-
-.send-message label {
-  position: absolute;
-}
-
-.send-message input {
-  border: 1px solid #000000;
-  background-color: #fff;
-  -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
 .clients {
   padding: 64px 0 200px 0;
   background-color: #fff;
@@ -872,5 +849,98 @@ section, p {
 
 .contacts-list__item {
   margin: 2em 0;
+}
+
+.contacts-heading {
+  margin: 5rem 0 2rem 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.send-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+}
+
+.send-message .full {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  margin: 0 0 40px 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.send-message .half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin: 0 0 40px 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .send-message .half {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.send-message .half:first-child {
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .send-message .half:first-child {
+    margin-right: 0;
+  }
+}
+
+.send-message .form-label {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.send-message input, .send-message textarea {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.5em;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0 1px inset #fff;
+          box-shadow: 0 0 0 1px inset #fff;
+}
+
+.page-footer {
+  padding: 2em 0 0 2em;
 }
 /*# sourceMappingURL=style.css.map */

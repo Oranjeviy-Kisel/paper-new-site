@@ -1,39 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&display=swap');
 
-
-//breakpoints
-$breakpoint-xs: 0;
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-
-// Color variables
-$colorsMap: (
-  blue: #007bff,
-  indigo: #6610f2,
-  purple: #6f42c1,
-  pink: #e83e8c,
-  red: #dc3545,
-  orange: #fd7e14,
-  yellow: #ffc107,
-  green: #28a745,
-  teal: #20c997,
-  cyan: #17a2b8,
-  page-white: #fff,
-  gray: #6c757d,
-  darkgrey: #343a40,
-  primary: #007bff,
-  secondary: #6c757d,
-  success: #28a745,
-  info: #17a2b8,
-  warning: #ffc107,
-  danger: #dc3545,
-  light: #f8f9fa,
-  bluegray: #607d8b,
-  black: #000000
-);
-
+@import "variables";
 
 $darkgrey: map-get( $colorsMap, darkgrey);
 $bluegray: map-get( $colorsMap, bluegray);
@@ -143,7 +110,7 @@ section, p {
 
 //buttons
 
-.button{
+.page-button{
   display: inline-block;
   padding: 20px;
   text-decoration: none;
@@ -152,6 +119,14 @@ section, p {
     background-color: $black;
     color: $page-white;
   }
+
+  &--outline{
+    border: 1px solid red;
+  }
+}
+
+.block-button{
+  display: block;
 }
 
 .page-section{
@@ -574,7 +549,24 @@ section, p {
   img{
     width: 100%;
   }
+
+  .person-name{
+    color: $darkgrey;
+  }
+
+  .person-profession{
+    font-weight: 700;
+    color: $darkgrey;
+  }
+
+  .person-about{
+    color: red;
+  }
 }
+
+
+
+
 //Статистика
 
 .statistic-cell{
@@ -699,41 +691,6 @@ section, p {
   }
 }
 
-
-//Contacts
-
-.send-message{
-  display: flex;
-  flex-wrap: wrap;
-  background-color: $bluegray;
-
-  p{
-    flex-grow: 1;
-  }
-
-  div{ 
-    flex-basis: 75%;
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    margin: 40px 0 40px 0;
-  }
-
-  label{
-    position: absolute;
-  }
-
-  input{
-    border: 1px solid $black;
-    background-color: $page-white;
-    flex-basis: 75%;
-    flex-grow: 1;
-  }
-}
-
-
-
 //clients
 .clients{
   padding: 64px 0 200px 0;
@@ -752,11 +709,83 @@ section, p {
   }
 }
 
-//contacts
+//Contacts
 .contacts-list{
   @extend %list-reset;
 
   &__item{
     margin: 2em 0;
   }
+}
+
+.contacts-heading{
+  margin: 5rem 0 2rem 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.send-message{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // background-color: $bluegray;
+  margin: 0;
+
+  .full{ 
+    display: flex;
+    flex-direction: column;
+    flex-basis: 90%;
+    margin: 0 0 40px 0;
+    flex-grow: 1;
+  }
+
+  .half{ 
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    margin: 0 0 40px 0;
+    flex-grow: 1;
+
+    @media screen and (max-width: $breakpoint-md){
+      flex-basis: 100%;
+    }
+  }
+
+  .half:first-child{
+    margin-right: 2rem;
+
+    @media screen and (max-width: $breakpoint-md){
+      margin-right: 0;
+    }
+  }
+
+  .form-label{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  input, textarea {
+    flex-basis: 100%;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.5em;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: 0 0 0 1px inset $page-white;
+  }
+ 
+  input[type="text"]{
+    // background-color: green;
+  }
+}
+
+//page-footer
+
+.page-footer{
+  padding: 2em 0 0 2em;
 }
