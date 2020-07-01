@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&display=swap');
 
 @import "variables";
-
-$darkgrey: map-get( $colorsMap, darkgrey);
-$bluegray: map-get( $colorsMap, bluegray);
-$page-white: map-get( $colorsMap, page-white);
-$black: map-get( $colorsMap, black);
-$indigo: map-get( $colorsMap, indigo);
+@import "components";
+@import "mixins";
 
 
-
-//backgrounds
-@each $colorName, $colorVal in $colorsMap {
-  #{'.bg-' + $colorName } {
-    background-color: $colorVal;
-  }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 0;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
+
 
 //   text-colors  //
 .text-white{
@@ -58,24 +59,6 @@ body{
   font-size: 16px;
   position: relative;
 }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 0;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-%list-reset{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 
 .show-md{
   display: none;
@@ -295,12 +278,20 @@ section, p {
 }
 
 .social-block{
+  @extend %list-reset;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10rem auto;
 
   a {
-    margin-right: 1em;
+    display: block;
+    margin-right: 3rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.6;
   }
 
   a:last-child {
@@ -787,5 +778,5 @@ section, p {
 //page-footer
 
 .page-footer{
-  padding: 2em 0 0 2em;
+  padding: 2em 0 6em 0;
 }

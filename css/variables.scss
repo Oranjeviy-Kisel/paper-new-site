@@ -30,3 +30,17 @@ $colorsMap: (
   bluegray: #607d8b,
   black: #000000
 );
+
+$darkgrey: map-get( $colorsMap, darkgrey);
+$bluegray: map-get( $colorsMap, bluegray);
+$page-white: map-get( $colorsMap, page-white);
+$black: map-get( $colorsMap, black);
+$indigo: map-get( $colorsMap, indigo);
+
+
+//backgrounds
+@each $colorName, $colorVal in $colorsMap {
+  #{'.bg-' + $colorName } {
+    background-color: $colorVal;
+  }
+}

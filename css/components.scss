@@ -1,0 +1,11 @@
+.page-button{
+    text-transform: uppercase;
+    padding: 1rem;
+    color: $page-white;
+    background-color: $darkgrey;
+    
+    &--inline{
+        display: inline-block;
+    }
+}
+
